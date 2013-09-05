@@ -47,14 +47,12 @@
 		9665C80D166704DC0003DC9A /* DICHOAskingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9665C80C166704DC0003DC9A /* DICHOAskingViewController.m */; };
 		9666C5BB16915C660027E3CF /* DICHOForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9666C5BA16915C660027E3CF /* DICHOForgotPasswordViewController.m */; };
 		9669C2D217D1ADB8003F77B4 /* DICHOPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2D117D1ADB8003F77B4 /* DICHOPictureViewController.m */; };
-		9669C2D417D5AF75003F77B4 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 9669C2D317D5AF74003F77B4 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png */; };
 		9669C2D717D5B172003F77B4 /* DICHOTutorial1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2D617D5B172003F77B4 /* DICHOTutorial1ViewController.m */; };
 		9669C2DA17D5B1F3003F77B4 /* DICHOTutorial2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2D917D5B1F3003F77B4 /* DICHOTutorial2ViewController.m */; };
 		9669C2DD17D5B20E003F77B4 /* DICHOTutorial3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2DC17D5B20E003F77B4 /* DICHOTutorial3ViewController.m */; };
 		9669C2E017D5B27F003F77B4 /* DICHOTutorial4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2DF17D5B27F003F77B4 /* DICHOTutorial4ViewController.m */; };
 		9669C2E317D5B395003F77B4 /* DICHOTutorial5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2E217D5B395003F77B4 /* DICHOTutorial5ViewController.m */; };
 		9669C2E617D5B3C2003F77B4 /* DICHOTutorial6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2E517D5B3C2003F77B4 /* DICHOTutorial6ViewController.m */; };
-		96716F3D17D65A720083CE60 /* Screen Shot 2013-09-03 at 12.19.33 PM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96716F3C17D65A720083CE60 /* Screen Shot 2013-09-03 at 12.19.33 PM.jpg */; };
 		96716F4017D6C6AD0083CE60 /* DICHOContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96716F3F17D6C6AD0083CE60 /* DICHOContactUsViewController.m */; };
 		967B88E9168CBC0200AD51D6 /* dicho_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 967B88E8168CBC0200AD51D6 /* dicho_camera.png */; };
 		9691D71F1680C2A90021AD3C /* DICHOSingleUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9691D71E1680C2A90021AD3C /* DICHOSingleUserViewController.m */; };
@@ -173,7 +171,6 @@
 		9666C5BA16915C660027E3CF /* DICHOForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOForgotPasswordViewController.m; sourceTree = "<group>"; };
 		9669C2D017D1ADB8003F77B4 /* DICHOPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOPictureViewController.h; sourceTree = "<group>"; };
 		9669C2D117D1ADB8003F77B4 /* DICHOPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOPictureViewController.m; sourceTree = "<group>"; };
-		9669C2D317D5AF74003F77B4 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2013-08-26 at 4-1.34.04 PM.png"; path = "../../../Downloads/Screen Shot 2013-08-26 at 4-1.34.04 PM.png"; sourceTree = "<group>"; };
 		9669C2D517D5B172003F77B4 /* DICHOTutorial1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOTutorial1ViewController.h; sourceTree = "<group>"; };
 		9669C2D617D5B172003F77B4 /* DICHOTutorial1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOTutorial1ViewController.m; sourceTree = "<group>"; };
 		9669C2D817D5B1F3003F77B4 /* DICHOTutorial2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOTutorial2ViewController.h; sourceTree = "<group>"; };
@@ -186,7 +183,6 @@
 		9669C2E217D5B395003F77B4 /* DICHOTutorial5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOTutorial5ViewController.m; sourceTree = "<group>"; };
 		9669C2E417D5B3C2003F77B4 /* DICHOTutorial6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOTutorial6ViewController.h; sourceTree = "<group>"; };
 		9669C2E517D5B3C2003F77B4 /* DICHOTutorial6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOTutorial6ViewController.m; sourceTree = "<group>"; };
-		96716F3C17D65A720083CE60 /* Screen Shot 2013-09-03 at 12.19.33 PM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Screen Shot 2013-09-03 at 12.19.33 PM.jpg"; path = "../../../Downloads/Screen Shot 2013-09-03 at 12.19.33 PM.jpg"; sourceTree = "<group>"; };
 		96716F3E17D6C6AD0083CE60 /* DICHOContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOContactUsViewController.h; sourceTree = "<group>"; };
 		96716F3F17D6C6AD0083CE60 /* DICHOContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOContactUsViewController.m; sourceTree = "<group>"; };
 		967B88E8168CBC0200AD51D6 /* dicho_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dicho_camera.png; path = ../dicho_camera.png; sourceTree = "<group>"; };
@@ -309,7 +305,6 @@
 				96009F61160E02CD0029D062 /* DICHOAppDelegate.h */,
 				96009F62160E02CD0029D062 /* DICHOAppDelegate.m */,
 				96CFDEC216782B6B00BBE426 /* MainStoryboard.storyboard */,
-				96716F3C17D65A720083CE60 /* Screen Shot 2013-09-03 at 12.19.33 PM.jpg */,
 				9669C2D517D5B172003F77B4 /* DICHOTutorial1ViewController.h */,
 				9669C2D617D5B172003F77B4 /* DICHOTutorial1ViewController.m */,
 				9669C2D817D5B1F3003F77B4 /* DICHOTutorial2ViewController.h */,
@@ -322,7 +317,6 @@
 				9669C2E217D5B395003F77B4 /* DICHOTutorial5ViewController.m */,
 				9669C2E417D5B3C2003F77B4 /* DICHOTutorial6ViewController.h */,
 				9669C2E517D5B3C2003F77B4 /* DICHOTutorial6ViewController.m */,
-				9669C2D317D5AF74003F77B4 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png */,
 				96E3BA9017531F670099D19F /* DICHOAsyncImageViewRound.h */,
 				96E3BA9117531F670099D19F /* DICHOAsyncImageViewRound.m */,
 				96000CF5169580A500BA066D /* DICHODichoNavViewController.h */,
@@ -549,12 +543,10 @@
 			files = (
 				96CFDEC316782B6B00BBE426 /* MainStoryboard.storyboard in Resources */,
 				96CFDEC916782E2700BBE426 /* InfoPlist.strings in Resources */,
-				9669C2D417D5AF75003F77B4 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png in Resources */,
 				967B88E9168CBC0200AD51D6 /* dicho_camera.png in Resources */,
 				96C3ABD51693AE0600D25465 /* settingsTabBarIcon.png in Resources */,
 				96428B211693B28500F05DBC /* homeTabBarIcon.png in Resources */,
 				96428B2A1693B6E400F05DBC /* submitTabBarIcon.png in Resources */,
-				96716F3D17D65A720083CE60 /* Screen Shot 2013-09-03 at 12.19.33 PM.jpg in Resources */,
 				96428B2C1693BB9500F05DBC /* searchTabBarIcon.png in Resources */,
 				96000CE8169526B700BA066D /* favorite_empty.png in Resources */,
 				962C8FBA173174DF00F7C5F0 /* blackXicon.png in Resources */,
