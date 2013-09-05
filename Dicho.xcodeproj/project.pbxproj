@@ -7,47 +7,248 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96000CE8169526B700BA066D /* favorite_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 96000CE6169526B700BA066D /* favorite_empty.png */; };
+		96000CF7169580A600BA066D /* DICHODichoNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96000CF6169580A500BA066D /* DICHODichoNavViewController.m */; };
 		96009F53160E02CD0029D062 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96009F52160E02CD0029D062 /* UIKit.framework */; };
 		96009F55160E02CD0029D062 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96009F54160E02CD0029D062 /* Foundation.framework */; };
 		96009F57160E02CD0029D062 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96009F56160E02CD0029D062 /* CoreGraphics.framework */; };
-		96009F5D160E02CD0029D062 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96009F5B160E02CD0029D062 /* InfoPlist.strings */; };
 		96009F5F160E02CD0029D062 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96009F5E160E02CD0029D062 /* main.m */; };
 		96009F63160E02CD0029D062 /* DICHOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96009F62160E02CD0029D062 /* DICHOAppDelegate.m */; };
-		96009F65160E02CD0029D062 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96009F64160E02CD0029D062 /* Default.png */; };
-		96009F67160E02CD0029D062 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96009F66160E02CD0029D062 /* Default@2x.png */; };
-		96009F69160E02CD0029D062 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96009F68160E02CD0029D062 /* Default-568h@2x.png */; };
-		96009F6C160E02CE0029D062 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96009F6A160E02CD0029D062 /* MainStoryboard.storyboard */; };
-		96009F6F160E02CE0029D062 /* DICHOFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96009F6E160E02CE0029D062 /* DICHOFirstViewController.m */; };
-		96009F71160E02CE0029D062 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 96009F70160E02CE0029D062 /* first.png */; };
-		96009F73160E02CE0029D062 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96009F72160E02CE0029D062 /* first@2x.png */; };
-		96009F76160E02CE0029D062 /* DICHOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96009F75160E02CE0029D062 /* DICHOSecondViewController.m */; };
-		96009F78160E02CE0029D062 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 96009F77160E02CE0029D062 /* second.png */; };
-		96009F7A160E02CE0029D062 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96009F79160E02CE0029D062 /* second@2x.png */; };
+		96009F85160E06580029D062 /* DICHOMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96009F84160E06580029D062 /* DICHOMainViewController.m */; };
+		960B39EC17B20A0900659C3C /* DICHOSearchGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 960B39EB17B20A0900659C3C /* DICHOSearchGroupsViewController.m */; };
+		9611F88F16B37EA6006E1688 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9611F88E16B37EA6006E1688 /* QuartzCore.framework */; };
+		9623D20E175D376A008F9C5B /* DICHOUsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9623D20D175D3767008F9C5B /* DICHOUsernameViewController.m */; };
+		9624C21D174E8A7000B1C336 /* DICHOSUAskingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624C21C174E8A7000B1C336 /* DICHOSUAskingViewController.m */; };
+		9624C220174E8ADF00B1C336 /* DICHOSUAnsweringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624C21F174E8ADF00B1C336 /* DICHOSUAnsweringViewController.m */; };
+		9624C223174FF21500B1C336 /* DICHOAnsweredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624C222174FF21400B1C336 /* DICHOAnsweredViewController.m */; };
+		9624C226175009A500B1C336 /* DICHOHomeResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624C225175009A400B1C336 /* DICHOHomeResultsViewController.m */; };
+		9624C22917500A3100B1C336 /* DICHOHomeShowAnswerersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624C22817500A3100B1C336 /* DICHOHomeShowAnswerersViewController.m */; };
+		96271FA617AC5AAD00496F7C /* DICHOGroupMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96271FA517AC5AAD00496F7C /* DICHOGroupMembersViewController.m */; };
+		96271FA917ACCEEE00496F7C /* DICHOGroupAskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96271FA817ACCEEE00496F7C /* DICHOGroupAskViewController.m */; };
+		96271FAD17AD756E00496F7C /* DICHOGroupSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96271FAB17AD756E00496F7C /* DICHOGroupSettingsViewController.m */; };
+		96289C05160E576700FEFFE9 /* DICHOSubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96289C04160E576700FEFFE9 /* DICHOSubmitViewController.m */; };
+		962C8FBA173174DF00F7C5F0 /* blackXicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 962C8FB9173174DF00F7C5F0 /* blackXicon.png */; };
+		962CB59216583E9E0073ABAA /* DICHOAnsweringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962CB59116583E9D0073ABAA /* DICHOAnsweringViewController.m */; };
+		9631DF37168F8E2A00FB4E47 /* DICHONameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9631DF36168F8E2900FB4E47 /* DICHONameViewController.m */; };
+		9631DF3B168F8E4D00FB4E47 /* DICHOProfilePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9631DF3A168F8E4D00FB4E47 /* DICHOProfilePictureViewController.m */; };
+		9631DF3E168F8E6400FB4E47 /* DICHOPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9631DF3D168F8E6400FB4E47 /* DICHOPasswordViewController.m */; };
+		9631DF41168F8E8000FB4E47 /* DICHOEmailAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9631DF40168F8E8000FB4E47 /* DICHOEmailAddressViewController.m */; };
+		964154A91683D0C400B94FF2 /* DICHOSearchFullNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964154A81683D0C400B94FF2 /* DICHOSearchFullNameViewController.m */; };
+		964154AC168410B800B94FF2 /* DICHOCreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964154AB168410B800B94FF2 /* DICHOCreateAccountViewController.m */; };
+		96428B211693B28500F05DBC /* homeTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96428B201693B28500F05DBC /* homeTabBarIcon.png */; };
+		96428B2A1693B6E400F05DBC /* submitTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96428B291693B6E400F05DBC /* submitTabBarIcon.png */; };
+		96428B2C1693BB9500F05DBC /* searchTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96428B2B1693BB9500F05DBC /* searchTabBarIcon.png */; };
+		964C087017C02E2F0019BFAA /* DICHOCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964C086F17C02E2F0019BFAA /* DICHOCommentsViewController.m */; };
+		964DDB7817AE399600A82637 /* DICHOGroupAdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964DDB7717AE399600A82637 /* DICHOGroupAdminViewController.m */; };
+		964DDB7B17B0A20800A82637 /* DICHOGroupRequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964DDB7A17B0A20800A82637 /* DICHOGroupRequestsViewController.m */; };
+		964DDB7E17B0E57100A82637 /* DICHOGroupRemoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964DDB7D17B0E57000A82637 /* DICHOGroupRemoveViewController.m */; };
+		964E51AB1674E2DA0061E33E /* DICHOResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964E51AA1674E2DA0061E33E /* DICHOResultsViewController.m */; };
+		9660786F17C40C9C0052F618 /* DICHOShowLikesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9660786E17C40C9C0052F618 /* DICHOShowLikesViewController.m */; };
+		9665C80D166704DC0003DC9A /* DICHOAskingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9665C80C166704DC0003DC9A /* DICHOAskingViewController.m */; };
+		9666C5BB16915C660027E3CF /* DICHOForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9666C5BA16915C660027E3CF /* DICHOForgotPasswordViewController.m */; };
+		9669C2D217D1ADB8003F77B4 /* DICHOPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2D117D1ADB8003F77B4 /* DICHOPictureViewController.m */; };
+		9669C2D417D5AF75003F77B4 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 9669C2D317D5AF74003F77B4 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png */; };
+		9669C2D717D5B172003F77B4 /* DICHOTutorial1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2D617D5B172003F77B4 /* DICHOTutorial1ViewController.m */; };
+		9669C2DA17D5B1F3003F77B4 /* DICHOTutorial2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2D917D5B1F3003F77B4 /* DICHOTutorial2ViewController.m */; };
+		9669C2DD17D5B20E003F77B4 /* DICHOTutorial3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2DC17D5B20E003F77B4 /* DICHOTutorial3ViewController.m */; };
+		9669C2E017D5B27F003F77B4 /* DICHOTutorial4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2DF17D5B27F003F77B4 /* DICHOTutorial4ViewController.m */; };
+		9669C2E317D5B395003F77B4 /* DICHOTutorial5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2E217D5B395003F77B4 /* DICHOTutorial5ViewController.m */; };
+		9669C2E617D5B3C2003F77B4 /* DICHOTutorial6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9669C2E517D5B3C2003F77B4 /* DICHOTutorial6ViewController.m */; };
+		96716F3D17D65A720083CE60 /* Screen Shot 2013-09-03 at 12.19.33 PM.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96716F3C17D65A720083CE60 /* Screen Shot 2013-09-03 at 12.19.33 PM.jpg */; };
+		96716F4017D6C6AD0083CE60 /* DICHOContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96716F3F17D6C6AD0083CE60 /* DICHOContactUsViewController.m */; };
+		967B88E9168CBC0200AD51D6 /* dicho_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 967B88E8168CBC0200AD51D6 /* dicho_camera.png */; };
+		9691D71F1680C2A90021AD3C /* DICHOSingleUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9691D71E1680C2A90021AD3C /* DICHOSingleUserViewController.m */; };
+		96A3759617D83B500038ABC8 /* DICHOPopularDichosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3759517D83B500038ABC8 /* DICHOPopularDichosViewController.m */; };
+		96A3759917D83BC20038ABC8 /* DICHOInterestingPeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96A3759817D83BC20038ABC8 /* DICHOInterestingPeopleViewController.m */; };
+		96B36CA31677690100F5A230 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B36CA21677690100F5A230 /* SystemConfiguration.framework */; };
+		96BFC710165C907800DA1E07 /* DICHOSearchChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BFC70F165C907800DA1E07 /* DICHOSearchChooseViewController.m */; };
+		96C2A52017ADDD9B00C563B1 /* DICHOGroupNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C2A51E17ADDD9A00C563B1 /* DICHOGroupNameViewController.m */; };
+		96C2A52417ADFF3800C563B1 /* DICHOGroupUsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C2A52317ADFF3700C563B1 /* DICHOGroupUsernameViewController.m */; };
+		96C2A52717AE1AC800C563B1 /* DICHOGroupPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C2A52617AE1AC800C563B1 /* DICHOGroupPictureViewController.m */; };
+		96C3ABD51693AE0600D25465 /* settingsTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C3ABD41693AE0600D25465 /* settingsTabBarIcon.png */; };
+		96C945771641F351000F283F /* DICHOLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C945761641F351000F283F /* DICHOLogInViewController.m */; };
+		96C9457E1642040C000F283F /* DICHOSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C9457D1642040C000F283F /* DICHOSettingsViewController.m */; };
+		96CA399C1740C0A3003C2286 /* DICHOSingleUserResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CA399B1740C0A3003C2286 /* DICHOSingleUserResultsViewController.m */; };
+		96CA399F1740CBA5003C2286 /* DICHOSUShowAnswerersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CA399E1740CBA5003C2286 /* DICHOSUShowAnswerersViewController.m */; };
+		96CA39A817434560003C2286 /* DICHOFavoritedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CA39A71743455F003C2286 /* DICHOFavoritedViewController.m */; };
+		96CAFE3E169653B400067DA9 /* DICHOShowAnswerersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CAFE3D169653B400067DA9 /* DICHOShowAnswerersViewController.m */; };
+		96CFDEC316782B6B00BBE426 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CFDEC216782B6B00BBE426 /* MainStoryboard.storyboard */; };
+		96CFDEC916782E2700BBE426 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96CFDEC816782E2700BBE426 /* InfoPlist.strings */; };
+		96CFDECF16782FB300BBE426 /* DICHOSearchUsernameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CFDECE16782FB300BBE426 /* DICHOSearchUsernameViewController.m */; };
+		96D33BC317C817380066A4B2 /* results_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D33BBF17C817380066A4B2 /* results_filled.png */; };
+		96D33BC517C817380066A4B2 /* comment_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D33BC117C817380066A4B2 /* comment_filled.png */; };
+		96D33BD617C99BB90066A4B2 /* results_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D33BD517C99BB80066A4B2 /* results_empty.png */; };
+		96D33BD817C99BC30066A4B2 /* comment_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D33BD717C99BC30066A4B2 /* comment_empty.png */; };
+		96E3558A17818A58006C37E0 /* dichoTabBarIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3558917818A58006C37E0 /* dichoTabBarIcon.png */; };
+		96E3558C178258E6006C37E0 /* favorite_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3558B178258E6006C37E0 /* favorite_filled.png */; };
+		96E355901782D5D9006C37E0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3558D1782D5D4006C37E0 /* Default.png */; };
+		96E355911782D5D9006C37E0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3558E1782D5D5006C37E0 /* Default-568h@2x.png */; };
+		96E355921782D5D9006C37E0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3558F1782D5D7006C37E0 /* Default@2x.png */; };
+		96E355981782D775006C37E0 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E355941782D74D006C37E0 /* Icon-Small.png */; };
+		96E355991782D775006C37E0 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E355951782D756006C37E0 /* Icon-Small@2x.png */; };
+		96E3559A1782D775006C37E0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E355961782D762006C37E0 /* Icon@2x.png */; };
+		96E3559D1782F650006C37E0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3559C1782F64D006C37E0 /* Icon.png */; };
+		96E3559F1782FA26006C37E0 /* anonymousPicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E3559E1782FA23006C37E0 /* anonymousPicture.png */; };
+		96E3BA9217531F670099D19F /* DICHOAsyncImageViewRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E3BA9117531F670099D19F /* DICHOAsyncImageViewRound.m */; };
+		96E8A5EA17AA38C300B8318C /* DICHOHomeGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E8A5E917AA38C300B8318C /* DICHOHomeGroupsViewController.m */; };
+		96E8A5ED17AAD51800B8318C /* DICHOCreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E8A5EC17AAD51700B8318C /* DICHOCreateGroupViewController.m */; };
+		96E8A5F017AB004200B8318C /* DICHOSingleGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E8A5EF17AB004100B8318C /* DICHOSingleGroupViewController.m */; };
+		96E8A5F217AC389000B8318C /* settingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E8A5F117AC389000B8318C /* settingsIcon.png */; };
+		96F76F2A177ABFC90062F8A8 /* dicho_camera_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F76F29177ABFC80062F8A8 /* dicho_camera_blue.png */; };
+		96F76F2E17801B3B0062F8A8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F76F2D17801B390062F8A8 /* Social.framework */; };
+		96FA251B1666EC7E00E84ED1 /* DICHOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FA251A1666EC7C00E84ED1 /* DICHOHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96000CE6169526B700BA066D /* favorite_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite_empty.png; sourceTree = "<group>"; };
+		96000CF5169580A500BA066D /* DICHODichoNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHODichoNavViewController.h; sourceTree = "<group>"; };
+		96000CF6169580A500BA066D /* DICHODichoNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHODichoNavViewController.m; sourceTree = "<group>"; };
 		96009F4E160E02CD0029D062 /* Dicho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dicho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96009F52160E02CD0029D062 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96009F54160E02CD0029D062 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		96009F56160E02CD0029D062 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		96009F5A160E02CD0029D062 /* Dicho-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dicho-Info.plist"; sourceTree = "<group>"; };
-		96009F5C160E02CD0029D062 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		96009F5E160E02CD0029D062 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96009F60160E02CD0029D062 /* Dicho-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dicho-Prefix.pch"; sourceTree = "<group>"; };
 		96009F61160E02CD0029D062 /* DICHOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DICHOAppDelegate.h; sourceTree = "<group>"; };
 		96009F62160E02CD0029D062 /* DICHOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DICHOAppDelegate.m; sourceTree = "<group>"; };
-		96009F64160E02CD0029D062 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		96009F66160E02CD0029D062 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		96009F68160E02CD0029D062 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		96009F6B160E02CE0029D062 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		96009F6D160E02CE0029D062 /* DICHOFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DICHOFirstViewController.h; sourceTree = "<group>"; };
-		96009F6E160E02CE0029D062 /* DICHOFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DICHOFirstViewController.m; sourceTree = "<group>"; };
-		96009F70160E02CE0029D062 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		96009F72160E02CE0029D062 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		96009F74160E02CE0029D062 /* DICHOSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DICHOSecondViewController.h; sourceTree = "<group>"; };
-		96009F75160E02CE0029D062 /* DICHOSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DICHOSecondViewController.m; sourceTree = "<group>"; };
-		96009F77160E02CE0029D062 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		96009F79160E02CE0029D062 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		96009F83160E06580029D062 /* DICHOMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOMainViewController.h; sourceTree = "<group>"; };
+		96009F84160E06580029D062 /* DICHOMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOMainViewController.m; sourceTree = "<group>"; };
+		960B39EA17B20A0900659C3C /* DICHOSearchGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSearchGroupsViewController.h; sourceTree = "<group>"; };
+		960B39EB17B20A0900659C3C /* DICHOSearchGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSearchGroupsViewController.m; sourceTree = "<group>"; };
+		9611F88E16B37EA6006E1688 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9623D20C175D3763008F9C5B /* DICHOUsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOUsernameViewController.h; sourceTree = "<group>"; };
+		9623D20D175D3767008F9C5B /* DICHOUsernameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOUsernameViewController.m; sourceTree = "<group>"; };
+		9624C21B174E8A7000B1C336 /* DICHOSUAskingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSUAskingViewController.h; sourceTree = "<group>"; };
+		9624C21C174E8A7000B1C336 /* DICHOSUAskingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSUAskingViewController.m; sourceTree = "<group>"; };
+		9624C21E174E8ADF00B1C336 /* DICHOSUAnsweringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSUAnsweringViewController.h; sourceTree = "<group>"; };
+		9624C21F174E8ADF00B1C336 /* DICHOSUAnsweringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSUAnsweringViewController.m; sourceTree = "<group>"; };
+		9624C221174FF21400B1C336 /* DICHOAnsweredViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOAnsweredViewController.h; sourceTree = "<group>"; };
+		9624C222174FF21400B1C336 /* DICHOAnsweredViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOAnsweredViewController.m; sourceTree = "<group>"; };
+		9624C224175009A300B1C336 /* DICHOHomeResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOHomeResultsViewController.h; sourceTree = "<group>"; };
+		9624C225175009A400B1C336 /* DICHOHomeResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOHomeResultsViewController.m; sourceTree = "<group>"; };
+		9624C22717500A3000B1C336 /* DICHOHomeShowAnswerersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOHomeShowAnswerersViewController.h; sourceTree = "<group>"; };
+		9624C22817500A3100B1C336 /* DICHOHomeShowAnswerersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOHomeShowAnswerersViewController.m; sourceTree = "<group>"; };
+		96271FA417AC5AAD00496F7C /* DICHOGroupMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOGroupMembersViewController.h; sourceTree = "<group>"; };
+		96271FA517AC5AAD00496F7C /* DICHOGroupMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOGroupMembersViewController.m; sourceTree = "<group>"; };
+		96271FA717ACCEEE00496F7C /* DICHOGroupAskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOGroupAskViewController.h; sourceTree = "<group>"; };
+		96271FA817ACCEEE00496F7C /* DICHOGroupAskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOGroupAskViewController.m; sourceTree = "<group>"; };
+		96271FAA17AD756E00496F7C /* DICHOGroupSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOGroupSettingsViewController.h; sourceTree = "<group>"; };
+		96271FAB17AD756E00496F7C /* DICHOGroupSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOGroupSettingsViewController.m; sourceTree = "<group>"; };
+		96289C03160E576700FEFFE9 /* DICHOSubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSubmitViewController.h; sourceTree = "<group>"; };
+		96289C04160E576700FEFFE9 /* DICHOSubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSubmitViewController.m; sourceTree = "<group>"; };
+		962C8FB9173174DF00F7C5F0 /* blackXicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackXicon.png; sourceTree = "<group>"; };
+		962CB59016583E9D0073ABAA /* DICHOAnsweringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOAnsweringViewController.h; sourceTree = "<group>"; };
+		962CB59116583E9D0073ABAA /* DICHOAnsweringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOAnsweringViewController.m; sourceTree = "<group>"; };
+		9631DF35168F8E2900FB4E47 /* DICHONameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHONameViewController.h; sourceTree = "<group>"; };
+		9631DF36168F8E2900FB4E47 /* DICHONameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHONameViewController.m; sourceTree = "<group>"; };
+		9631DF39168F8E4D00FB4E47 /* DICHOProfilePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOProfilePictureViewController.h; sourceTree = "<group>"; };
+		9631DF3A168F8E4D00FB4E47 /* DICHOProfilePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOProfilePictureViewController.m; sourceTree = "<group>"; };
+		9631DF3C168F8E6300FB4E47 /* DICHOPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOPasswordViewController.h; sourceTree = "<group>"; };
+		9631DF3D168F8E6400FB4E47 /* DICHOPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOPasswordViewController.m; sourceTree = "<group>"; };
+		9631DF3F168F8E8000FB4E47 /* DICHOEmailAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOEmailAddressViewController.h; sourceTree = "<group>"; };
+		9631DF40168F8E8000FB4E47 /* DICHOEmailAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOEmailAddressViewController.m; sourceTree = "<group>"; };
+		964154A71683D0C400B94FF2 /* DICHOSearchFullNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSearchFullNameViewController.h; sourceTree = "<group>"; };
+		964154A81683D0C400B94FF2 /* DICHOSearchFullNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSearchFullNameViewController.m; sourceTree = "<group>"; };
+		964154AA168410B800B94FF2 /* DICHOCreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOCreateAccountViewController.h; sourceTree = "<group>"; };
+		964154AB168410B800B94FF2 /* DICHOCreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOCreateAccountViewController.m; sourceTree = "<group>"; };
+		96428B201693B28500F05DBC /* homeTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homeTabBarIcon.png; sourceTree = "<group>"; };
+		96428B291693B6E400F05DBC /* submitTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitTabBarIcon.png; sourceTree = "<group>"; };
+		96428B2B1693BB9500F05DBC /* searchTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchTabBarIcon.png; sourceTree = "<group>"; };
+		964C086E17C02E2F0019BFAA /* DICHOCommentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOCommentsViewController.h; sourceTree = "<group>"; };
+		964C086F17C02E2F0019BFAA /* DICHOCommentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOCommentsViewController.m; sourceTree = "<group>"; };
+		964DDB7617AE399600A82637 /* DICHOGroupAdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOGroupAdminViewController.h; sourceTree = "<group>"; };
+		964DDB7717AE399600A82637 /* DICHOGroupAdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOGroupAdminViewController.m; sourceTree = "<group>"; };
+		964DDB7917B0A20800A82637 /* DICHOGroupRequestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOGroupRequestsViewController.h; sourceTree = "<group>"; };
+		964DDB7A17B0A20800A82637 /* DICHOGroupRequestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOGroupRequestsViewController.m; sourceTree = "<group>"; };
+		964DDB7C17B0E57000A82637 /* DICHOGroupRemoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOGroupRemoveViewController.h; sourceTree = "<group>"; };
+		964DDB7D17B0E57000A82637 /* DICHOGroupRemoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOGroupRemoveViewController.m; sourceTree = "<group>"; };
+		964E51A91674E2DA0061E33E /* DICHOResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOResultsViewController.h; sourceTree = "<group>"; };
+		964E51AA1674E2DA0061E33E /* DICHOResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOResultsViewController.m; sourceTree = "<group>"; };
+		9660786D17C40C9B0052F618 /* DICHOShowLikesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOShowLikesViewController.h; sourceTree = "<group>"; };
+		9660786E17C40C9C0052F618 /* DICHOShowLikesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOShowLikesViewController.m; sourceTree = "<group>"; };
+		9665C80B166704DC0003DC9A /* DICHOAskingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOAskingViewController.h; sourceTree = "<group>"; };
+		9665C80C166704DC0003DC9A /* DICHOAskingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOAskingViewController.m; sourceTree = "<group>"; };
+		9666C5B916915C650027E3CF /* DICHOForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOForgotPasswordViewController.h; sourceTree = "<group>"; };
+		9666C5BA16915C660027E3CF /* DICHOForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOForgotPasswordViewController.m; sourceTree = "<group>"; };
+		9669C2D017D1ADB8003F77B4 /* DICHOPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOPictureViewController.h; sourceTree = "<group>"; };
+		9669C2D117D1ADB8003F77B4 /* DICHOPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOPictureViewController.m; sourceTree = "<group>"; };
+		9669C2D317D5AF74003F77B4 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2013-08-26 at 4-1.34.04 PM.png"; path = "../../../Downloads/Screen Shot 2013-08-26 at 4-1.34.04 PM.png"; sourceTree = "<group>"; };
+		9669C2D517D5B172003F77B4 /* DICHOTutorial1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOTutorial1ViewController.h; sourceTree = "<group>"; };
+		9669C2D617D5B172003F77B4 /* DICHOTutorial1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOTutorial1ViewController.m; sourceTree = "<group>"; };
+		9669C2D817D5B1F3003F77B4 /* DICHOTutorial2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOTutorial2ViewController.h; sourceTree = "<group>"; };
+		9669C2D917D5B1F3003F77B4 /* DICHOTutorial2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOTutorial2ViewController.m; sourceTree = "<group>"; };
+		9669C2DB17D5B20E003F77B4 /* DICHOTutorial3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOTutorial3ViewController.h; sourceTree = "<group>"; };
+		9669C2DC17D5B20E003F77B4 /* DICHOTutorial3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOTutorial3ViewController.m; sourceTree = "<group>"; };
+		9669C2DE17D5B27F003F77B4 /* DICHOTutorial4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOTutorial4ViewController.h; sourceTree = "<group>"; };
+		9669C2DF17D5B27F003F77B4 /* DICHOTutorial4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOTutorial4ViewController.m; sourceTree = "<group>"; };
+		9669C2E117D5B395003F77B4 /* DICHOTutorial5ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOTutorial5ViewController.h; sourceTree = "<group>"; };
+		9669C2E217D5B395003F77B4 /* DICHOTutorial5ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOTutorial5ViewController.m; sourceTree = "<group>"; };
+		9669C2E417D5B3C2003F77B4 /* DICHOTutorial6ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOTutorial6ViewController.h; sourceTree = "<group>"; };
+		9669C2E517D5B3C2003F77B4 /* DICHOTutorial6ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOTutorial6ViewController.m; sourceTree = "<group>"; };
+		96716F3C17D65A720083CE60 /* Screen Shot 2013-09-03 at 12.19.33 PM.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Screen Shot 2013-09-03 at 12.19.33 PM.jpg"; path = "../../../Downloads/Screen Shot 2013-09-03 at 12.19.33 PM.jpg"; sourceTree = "<group>"; };
+		96716F3E17D6C6AD0083CE60 /* DICHOContactUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOContactUsViewController.h; sourceTree = "<group>"; };
+		96716F3F17D6C6AD0083CE60 /* DICHOContactUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOContactUsViewController.m; sourceTree = "<group>"; };
+		967B88E8168CBC0200AD51D6 /* dicho_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dicho_camera.png; path = ../dicho_camera.png; sourceTree = "<group>"; };
+		9691D71D1680C2A90021AD3C /* DICHOSingleUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSingleUserViewController.h; sourceTree = "<group>"; };
+		9691D71E1680C2A90021AD3C /* DICHOSingleUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSingleUserViewController.m; sourceTree = "<group>"; };
+		96A3759417D83B500038ABC8 /* DICHOPopularDichosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOPopularDichosViewController.h; sourceTree = "<group>"; };
+		96A3759517D83B500038ABC8 /* DICHOPopularDichosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOPopularDichosViewController.m; sourceTree = "<group>"; };
+		96A3759717D83BC10038ABC8 /* DICHOInterestingPeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOInterestingPeopleViewController.h; sourceTree = "<group>"; };
+		96A3759817D83BC20038ABC8 /* DICHOInterestingPeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOInterestingPeopleViewController.m; sourceTree = "<group>"; };
+		96B36CA21677690100F5A230 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		96BFC70E165C907800DA1E07 /* DICHOSearchChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSearchChooseViewController.h; sourceTree = "<group>"; };
+		96BFC70F165C907800DA1E07 /* DICHOSearchChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSearchChooseViewController.m; sourceTree = "<group>"; };
+		96C2A51D17ADDD9900C563B1 /* DICHOGroupNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOGroupNameViewController.h; sourceTree = "<group>"; };
+		96C2A51E17ADDD9A00C563B1 /* DICHOGroupNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOGroupNameViewController.m; sourceTree = "<group>"; };
+		96C2A52217ADFF3700C563B1 /* DICHOGroupUsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOGroupUsernameViewController.h; sourceTree = "<group>"; };
+		96C2A52317ADFF3700C563B1 /* DICHOGroupUsernameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOGroupUsernameViewController.m; sourceTree = "<group>"; };
+		96C2A52517AE1AC800C563B1 /* DICHOGroupPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOGroupPictureViewController.h; sourceTree = "<group>"; };
+		96C2A52617AE1AC800C563B1 /* DICHOGroupPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOGroupPictureViewController.m; sourceTree = "<group>"; };
+		96C3ABD41693AE0600D25465 /* settingsTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsTabBarIcon.png; sourceTree = "<group>"; };
+		96C945751641F351000F283F /* DICHOLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOLogInViewController.h; sourceTree = "<group>"; };
+		96C945761641F351000F283F /* DICHOLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOLogInViewController.m; sourceTree = "<group>"; };
+		96C9457C1642040C000F283F /* DICHOSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSettingsViewController.h; sourceTree = "<group>"; };
+		96C9457D1642040C000F283F /* DICHOSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSettingsViewController.m; sourceTree = "<group>"; };
+		96CA399A1740C0A3003C2286 /* DICHOSingleUserResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSingleUserResultsViewController.h; sourceTree = "<group>"; };
+		96CA399B1740C0A3003C2286 /* DICHOSingleUserResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSingleUserResultsViewController.m; sourceTree = "<group>"; };
+		96CA399D1740CBA5003C2286 /* DICHOSUShowAnswerersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSUShowAnswerersViewController.h; sourceTree = "<group>"; };
+		96CA399E1740CBA5003C2286 /* DICHOSUShowAnswerersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSUShowAnswerersViewController.m; sourceTree = "<group>"; };
+		96CA39A61743455E003C2286 /* DICHOFavoritedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOFavoritedViewController.h; sourceTree = "<group>"; };
+		96CA39A71743455F003C2286 /* DICHOFavoritedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOFavoritedViewController.m; sourceTree = "<group>"; };
+		96CAFE3C169653B400067DA9 /* DICHOShowAnswerersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOShowAnswerersViewController.h; sourceTree = "<group>"; };
+		96CAFE3D169653B400067DA9 /* DICHOShowAnswerersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOShowAnswerersViewController.m; sourceTree = "<group>"; };
+		96CFDEC216782B6B00BBE426 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		96CFDEC816782E2700BBE426 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		96CFDECD16782FB300BBE426 /* DICHOSearchUsernameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSearchUsernameViewController.h; sourceTree = "<group>"; };
+		96CFDECE16782FB300BBE426 /* DICHOSearchUsernameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSearchUsernameViewController.m; sourceTree = "<group>"; };
+		96D33BBF17C817380066A4B2 /* results_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = results_filled.png; sourceTree = "<group>"; };
+		96D33BC117C817380066A4B2 /* comment_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_filled.png; sourceTree = "<group>"; };
+		96D33BD517C99BB80066A4B2 /* results_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = results_empty.png; sourceTree = "<group>"; };
+		96D33BD717C99BC30066A4B2 /* comment_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment_empty.png; sourceTree = "<group>"; };
+		96E3558917818A58006C37E0 /* dichoTabBarIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dichoTabBarIcon.png; sourceTree = "<group>"; };
+		96E3558B178258E6006C37E0 /* favorite_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite_filled.png; sourceTree = "<group>"; };
+		96E3558D1782D5D4006C37E0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		96E3558E1782D5D5006C37E0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		96E3558F1782D5D7006C37E0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		96E355941782D74D006C37E0 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		96E355951782D756006C37E0 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		96E355961782D762006C37E0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		96E3559C1782F64D006C37E0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		96E3559E1782FA23006C37E0 /* anonymousPicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anonymousPicture.png; sourceTree = "<group>"; };
+		96E3BA9017531F670099D19F /* DICHOAsyncImageViewRound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOAsyncImageViewRound.h; sourceTree = "<group>"; };
+		96E3BA9117531F670099D19F /* DICHOAsyncImageViewRound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOAsyncImageViewRound.m; sourceTree = "<group>"; };
+		96E8A5E817AA38C300B8318C /* DICHOHomeGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOHomeGroupsViewController.h; sourceTree = "<group>"; };
+		96E8A5E917AA38C300B8318C /* DICHOHomeGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOHomeGroupsViewController.m; sourceTree = "<group>"; };
+		96E8A5EB17AAD51700B8318C /* DICHOCreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOCreateGroupViewController.h; sourceTree = "<group>"; };
+		96E8A5EC17AAD51700B8318C /* DICHOCreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOCreateGroupViewController.m; sourceTree = "<group>"; };
+		96E8A5EE17AB004000B8318C /* DICHOSingleGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSingleGroupViewController.h; sourceTree = "<group>"; };
+		96E8A5EF17AB004100B8318C /* DICHOSingleGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSingleGroupViewController.m; sourceTree = "<group>"; };
+		96E8A5F117AC389000B8318C /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
+		96F76F29177ABFC80062F8A8 /* dicho_camera_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dicho_camera_blue.png; sourceTree = "<group>"; };
+		96F76F2D17801B390062F8A8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		96FA25191666EC7A00E84ED1 /* DICHOHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOHomeViewController.h; sourceTree = "<group>"; };
+		96FA251A1666EC7C00E84ED1 /* DICHOHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +256,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F76F2E17801B3B0062F8A8 /* Social.framework in Frameworks */,
+				9611F88F16B37EA6006E1688 /* QuartzCore.framework in Frameworks */,
+				96B36CA31677690100F5A230 /* SystemConfiguration.framework in Frameworks */,
 				96009F53160E02CD0029D062 /* UIKit.framework in Frameworks */,
 				96009F55160E02CD0029D062 /* Foundation.framework in Frameworks */,
 				96009F57160E02CD0029D062 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +271,9 @@
 		96009F43160E02CD0029D062 = {
 			isa = PBXGroup;
 			children = (
+				96F76F2D17801B390062F8A8 /* Social.framework */,
+				9611F88E16B37EA6006E1688 /* QuartzCore.framework */,
+				96B36CA21677690100F5A230 /* SystemConfiguration.framework */,
 				96009F58160E02CD0029D062 /* Dicho */,
 				96009F51160E02CD0029D062 /* Frameworks */,
 				96009F4F160E02CD0029D062 /* Products */,
@@ -94,17 +301,32 @@
 		96009F58160E02CD0029D062 /* Dicho */ = {
 			isa = PBXGroup;
 			children = (
+				96CA39A11740D018003C2286 /* Main */,
+				96CA39A21740D023003C2286 /* Submit */,
+				96CA39A31740D02C003C2286 /* SearchNSingle */,
+				96CA39A41740D038003C2286 /* Home */,
+				96CA39A51740D03E003C2286 /* Settings */,
 				96009F61160E02CD0029D062 /* DICHOAppDelegate.h */,
 				96009F62160E02CD0029D062 /* DICHOAppDelegate.m */,
-				96009F6A160E02CD0029D062 /* MainStoryboard.storyboard */,
-				96009F6D160E02CE0029D062 /* DICHOFirstViewController.h */,
-				96009F6E160E02CE0029D062 /* DICHOFirstViewController.m */,
-				96009F70160E02CE0029D062 /* first.png */,
-				96009F72160E02CE0029D062 /* first@2x.png */,
-				96009F74160E02CE0029D062 /* DICHOSecondViewController.h */,
-				96009F75160E02CE0029D062 /* DICHOSecondViewController.m */,
-				96009F77160E02CE0029D062 /* second.png */,
-				96009F79160E02CE0029D062 /* second@2x.png */,
+				96CFDEC216782B6B00BBE426 /* MainStoryboard.storyboard */,
+				96716F3C17D65A720083CE60 /* Screen Shot 2013-09-03 at 12.19.33 PM.jpg */,
+				9669C2D517D5B172003F77B4 /* DICHOTutorial1ViewController.h */,
+				9669C2D617D5B172003F77B4 /* DICHOTutorial1ViewController.m */,
+				9669C2D817D5B1F3003F77B4 /* DICHOTutorial2ViewController.h */,
+				9669C2D917D5B1F3003F77B4 /* DICHOTutorial2ViewController.m */,
+				9669C2DB17D5B20E003F77B4 /* DICHOTutorial3ViewController.h */,
+				9669C2DC17D5B20E003F77B4 /* DICHOTutorial3ViewController.m */,
+				9669C2DE17D5B27F003F77B4 /* DICHOTutorial4ViewController.h */,
+				9669C2DF17D5B27F003F77B4 /* DICHOTutorial4ViewController.m */,
+				9669C2E117D5B395003F77B4 /* DICHOTutorial5ViewController.h */,
+				9669C2E217D5B395003F77B4 /* DICHOTutorial5ViewController.m */,
+				9669C2E417D5B3C2003F77B4 /* DICHOTutorial6ViewController.h */,
+				9669C2E517D5B3C2003F77B4 /* DICHOTutorial6ViewController.m */,
+				9669C2D317D5AF74003F77B4 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png */,
+				96E3BA9017531F670099D19F /* DICHOAsyncImageViewRound.h */,
+				96E3BA9117531F670099D19F /* DICHOAsyncImageViewRound.m */,
+				96000CF5169580A500BA066D /* DICHODichoNavViewController.h */,
+				96000CF6169580A500BA066D /* DICHODichoNavViewController.m */,
 				96009F59160E02CD0029D062 /* Supporting Files */,
 			);
 			path = Dicho;
@@ -113,15 +335,164 @@
 		96009F59160E02CD0029D062 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96D33BD717C99BC30066A4B2 /* comment_empty.png */,
+				96D33BD517C99BB80066A4B2 /* results_empty.png */,
+				96D33BC117C817380066A4B2 /* comment_filled.png */,
+				96D33BBF17C817380066A4B2 /* results_filled.png */,
+				96000CE6169526B700BA066D /* favorite_empty.png */,
+				96E3558B178258E6006C37E0 /* favorite_filled.png */,
+				96E8A5F117AC389000B8318C /* settingsIcon.png */,
+				96E3559C1782F64D006C37E0 /* Icon.png */,
+				96E355941782D74D006C37E0 /* Icon-Small.png */,
+				96E355951782D756006C37E0 /* Icon-Small@2x.png */,
+				96E355961782D762006C37E0 /* Icon@2x.png */,
+				96E3558D1782D5D4006C37E0 /* Default.png */,
+				96E3558E1782D5D5006C37E0 /* Default-568h@2x.png */,
+				96E3558F1782D5D7006C37E0 /* Default@2x.png */,
+				96E3559E1782FA23006C37E0 /* anonymousPicture.png */,
+				96F76F29177ABFC80062F8A8 /* dicho_camera_blue.png */,
+				962C8FB9173174DF00F7C5F0 /* blackXicon.png */,
+				96E3558917818A58006C37E0 /* dichoTabBarIcon.png */,
+				96428B2B1693BB9500F05DBC /* searchTabBarIcon.png */,
+				96428B291693B6E400F05DBC /* submitTabBarIcon.png */,
+				96C3ABD41693AE0600D25465 /* settingsTabBarIcon.png */,
+				96428B201693B28500F05DBC /* homeTabBarIcon.png */,
+				967B88E8168CBC0200AD51D6 /* dicho_camera.png */,
+				96CFDEC816782E2700BBE426 /* InfoPlist.strings */,
 				96009F5A160E02CD0029D062 /* Dicho-Info.plist */,
-				96009F5B160E02CD0029D062 /* InfoPlist.strings */,
 				96009F5E160E02CD0029D062 /* main.m */,
 				96009F60160E02CD0029D062 /* Dicho-Prefix.pch */,
-				96009F64160E02CD0029D062 /* Default.png */,
-				96009F66160E02CD0029D062 /* Default@2x.png */,
-				96009F68160E02CD0029D062 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		96CA39A11740D018003C2286 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				96009F83160E06580029D062 /* DICHOMainViewController.h */,
+				96009F84160E06580029D062 /* DICHOMainViewController.m */,
+				9669C2D017D1ADB8003F77B4 /* DICHOPictureViewController.h */,
+				9669C2D117D1ADB8003F77B4 /* DICHOPictureViewController.m */,
+				964C086E17C02E2F0019BFAA /* DICHOCommentsViewController.h */,
+				964C086F17C02E2F0019BFAA /* DICHOCommentsViewController.m */,
+				9660786D17C40C9B0052F618 /* DICHOShowLikesViewController.h */,
+				9660786E17C40C9C0052F618 /* DICHOShowLikesViewController.m */,
+				964E51A91674E2DA0061E33E /* DICHOResultsViewController.h */,
+				964E51AA1674E2DA0061E33E /* DICHOResultsViewController.m */,
+				96CAFE3C169653B400067DA9 /* DICHOShowAnswerersViewController.h */,
+				96CAFE3D169653B400067DA9 /* DICHOShowAnswerersViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		96CA39A21740D023003C2286 /* Submit */ = {
+			isa = PBXGroup;
+			children = (
+				96289C03160E576700FEFFE9 /* DICHOSubmitViewController.h */,
+				96289C04160E576700FEFFE9 /* DICHOSubmitViewController.m */,
+			);
+			name = Submit;
+			sourceTree = "<group>";
+		};
+		96CA39A31740D02C003C2286 /* SearchNSingle */ = {
+			isa = PBXGroup;
+			children = (
+				96BFC70E165C907800DA1E07 /* DICHOSearchChooseViewController.h */,
+				96BFC70F165C907800DA1E07 /* DICHOSearchChooseViewController.m */,
+				96A3759417D83B500038ABC8 /* DICHOPopularDichosViewController.h */,
+				96A3759517D83B500038ABC8 /* DICHOPopularDichosViewController.m */,
+				96A3759717D83BC10038ABC8 /* DICHOInterestingPeopleViewController.h */,
+				96A3759817D83BC20038ABC8 /* DICHOInterestingPeopleViewController.m */,
+				96CFDECD16782FB300BBE426 /* DICHOSearchUsernameViewController.h */,
+				96CFDECE16782FB300BBE426 /* DICHOSearchUsernameViewController.m */,
+				964154A71683D0C400B94FF2 /* DICHOSearchFullNameViewController.h */,
+				964154A81683D0C400B94FF2 /* DICHOSearchFullNameViewController.m */,
+				960B39EA17B20A0900659C3C /* DICHOSearchGroupsViewController.h */,
+				960B39EB17B20A0900659C3C /* DICHOSearchGroupsViewController.m */,
+				9691D71D1680C2A90021AD3C /* DICHOSingleUserViewController.h */,
+				9691D71E1680C2A90021AD3C /* DICHOSingleUserViewController.m */,
+				96CA399A1740C0A3003C2286 /* DICHOSingleUserResultsViewController.h */,
+				96CA399B1740C0A3003C2286 /* DICHOSingleUserResultsViewController.m */,
+				96CA399D1740CBA5003C2286 /* DICHOSUShowAnswerersViewController.h */,
+				96CA399E1740CBA5003C2286 /* DICHOSUShowAnswerersViewController.m */,
+				9624C21B174E8A7000B1C336 /* DICHOSUAskingViewController.h */,
+				9624C21C174E8A7000B1C336 /* DICHOSUAskingViewController.m */,
+				9624C21E174E8ADF00B1C336 /* DICHOSUAnsweringViewController.h */,
+				9624C21F174E8ADF00B1C336 /* DICHOSUAnsweringViewController.m */,
+			);
+			name = SearchNSingle;
+			sourceTree = "<group>";
+		};
+		96CA39A41740D038003C2286 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				96FA25191666EC7A00E84ED1 /* DICHOHomeViewController.h */,
+				96FA251A1666EC7C00E84ED1 /* DICHOHomeViewController.m */,
+				9665C80B166704DC0003DC9A /* DICHOAskingViewController.h */,
+				9665C80C166704DC0003DC9A /* DICHOAskingViewController.m */,
+				962CB59016583E9D0073ABAA /* DICHOAnsweringViewController.h */,
+				962CB59116583E9D0073ABAA /* DICHOAnsweringViewController.m */,
+				9624C221174FF21400B1C336 /* DICHOAnsweredViewController.h */,
+				9624C222174FF21400B1C336 /* DICHOAnsweredViewController.m */,
+				96CA39A61743455E003C2286 /* DICHOFavoritedViewController.h */,
+				96CA39A71743455F003C2286 /* DICHOFavoritedViewController.m */,
+				9624C224175009A300B1C336 /* DICHOHomeResultsViewController.h */,
+				9624C225175009A400B1C336 /* DICHOHomeResultsViewController.m */,
+				9624C22717500A3000B1C336 /* DICHOHomeShowAnswerersViewController.h */,
+				9624C22817500A3100B1C336 /* DICHOHomeShowAnswerersViewController.m */,
+				96E8A5E817AA38C300B8318C /* DICHOHomeGroupsViewController.h */,
+				96E8A5E917AA38C300B8318C /* DICHOHomeGroupsViewController.m */,
+				96E8A5EB17AAD51700B8318C /* DICHOCreateGroupViewController.h */,
+				96E8A5EC17AAD51700B8318C /* DICHOCreateGroupViewController.m */,
+				96E8A5EE17AB004000B8318C /* DICHOSingleGroupViewController.h */,
+				96E8A5EF17AB004100B8318C /* DICHOSingleGroupViewController.m */,
+				96271FA717ACCEEE00496F7C /* DICHOGroupAskViewController.h */,
+				96271FA817ACCEEE00496F7C /* DICHOGroupAskViewController.m */,
+				96271FA417AC5AAD00496F7C /* DICHOGroupMembersViewController.h */,
+				96271FA517AC5AAD00496F7C /* DICHOGroupMembersViewController.m */,
+				96271FAA17AD756E00496F7C /* DICHOGroupSettingsViewController.h */,
+				96271FAB17AD756E00496F7C /* DICHOGroupSettingsViewController.m */,
+				96C2A51D17ADDD9900C563B1 /* DICHOGroupNameViewController.h */,
+				96C2A51E17ADDD9A00C563B1 /* DICHOGroupNameViewController.m */,
+				96C2A52217ADFF3700C563B1 /* DICHOGroupUsernameViewController.h */,
+				96C2A52317ADFF3700C563B1 /* DICHOGroupUsernameViewController.m */,
+				96C2A52517AE1AC800C563B1 /* DICHOGroupPictureViewController.h */,
+				96C2A52617AE1AC800C563B1 /* DICHOGroupPictureViewController.m */,
+				964DDB7617AE399600A82637 /* DICHOGroupAdminViewController.h */,
+				964DDB7717AE399600A82637 /* DICHOGroupAdminViewController.m */,
+				964DDB7917B0A20800A82637 /* DICHOGroupRequestsViewController.h */,
+				964DDB7A17B0A20800A82637 /* DICHOGroupRequestsViewController.m */,
+				964DDB7C17B0E57000A82637 /* DICHOGroupRemoveViewController.h */,
+				964DDB7D17B0E57000A82637 /* DICHOGroupRemoveViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		96CA39A51740D03E003C2286 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				96C9457C1642040C000F283F /* DICHOSettingsViewController.h */,
+				96C9457D1642040C000F283F /* DICHOSettingsViewController.m */,
+				9631DF35168F8E2900FB4E47 /* DICHONameViewController.h */,
+				9631DF36168F8E2900FB4E47 /* DICHONameViewController.m */,
+				9623D20C175D3763008F9C5B /* DICHOUsernameViewController.h */,
+				9623D20D175D3767008F9C5B /* DICHOUsernameViewController.m */,
+				9631DF39168F8E4D00FB4E47 /* DICHOProfilePictureViewController.h */,
+				9631DF3A168F8E4D00FB4E47 /* DICHOProfilePictureViewController.m */,
+				9631DF3C168F8E6300FB4E47 /* DICHOPasswordViewController.h */,
+				9631DF3D168F8E6400FB4E47 /* DICHOPasswordViewController.m */,
+				9631DF3F168F8E8000FB4E47 /* DICHOEmailAddressViewController.h */,
+				9631DF40168F8E8000FB4E47 /* DICHOEmailAddressViewController.m */,
+				96C945751641F351000F283F /* DICHOLogInViewController.h */,
+				96C945761641F351000F283F /* DICHOLogInViewController.m */,
+				9666C5B916915C650027E3CF /* DICHOForgotPasswordViewController.h */,
+				9666C5BA16915C660027E3CF /* DICHOForgotPasswordViewController.m */,
+				964154AA168410B800B94FF2 /* DICHOCreateAccountViewController.h */,
+				964154AB168410B800B94FF2 /* DICHOCreateAccountViewController.m */,
+				96716F3E17D6C6AD0083CE60 /* DICHOContactUsViewController.h */,
+				96716F3F17D6C6AD0083CE60 /* DICHOContactUsViewController.m */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +522,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DICHO;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Locus Engineering LLC";
 			};
 			buildConfigurationList = 96009F48160E02CD0029D062 /* Build configuration list for PBXProject "Dicho" */;
@@ -176,15 +547,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96009F5D160E02CD0029D062 /* InfoPlist.strings in Resources */,
-				96009F65160E02CD0029D062 /* Default.png in Resources */,
-				96009F67160E02CD0029D062 /* Default@2x.png in Resources */,
-				96009F69160E02CD0029D062 /* Default-568h@2x.png in Resources */,
-				96009F6C160E02CE0029D062 /* MainStoryboard.storyboard in Resources */,
-				96009F71160E02CE0029D062 /* first.png in Resources */,
-				96009F73160E02CE0029D062 /* first@2x.png in Resources */,
-				96009F78160E02CE0029D062 /* second.png in Resources */,
-				96009F7A160E02CE0029D062 /* second@2x.png in Resources */,
+				96CFDEC316782B6B00BBE426 /* MainStoryboard.storyboard in Resources */,
+				96CFDEC916782E2700BBE426 /* InfoPlist.strings in Resources */,
+				9669C2D417D5AF75003F77B4 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png in Resources */,
+				967B88E9168CBC0200AD51D6 /* dicho_camera.png in Resources */,
+				96C3ABD51693AE0600D25465 /* settingsTabBarIcon.png in Resources */,
+				96428B211693B28500F05DBC /* homeTabBarIcon.png in Resources */,
+				96428B2A1693B6E400F05DBC /* submitTabBarIcon.png in Resources */,
+				96716F3D17D65A720083CE60 /* Screen Shot 2013-09-03 at 12.19.33 PM.jpg in Resources */,
+				96428B2C1693BB9500F05DBC /* searchTabBarIcon.png in Resources */,
+				96000CE8169526B700BA066D /* favorite_empty.png in Resources */,
+				962C8FBA173174DF00F7C5F0 /* blackXicon.png in Resources */,
+				96F76F2A177ABFC90062F8A8 /* dicho_camera_blue.png in Resources */,
+				96E3558A17818A58006C37E0 /* dichoTabBarIcon.png in Resources */,
+				96E3558C178258E6006C37E0 /* favorite_filled.png in Resources */,
+				96E355901782D5D9006C37E0 /* Default.png in Resources */,
+				96E355911782D5D9006C37E0 /* Default-568h@2x.png in Resources */,
+				96E355921782D5D9006C37E0 /* Default@2x.png in Resources */,
+				96E355981782D775006C37E0 /* Icon-Small.png in Resources */,
+				96E355991782D775006C37E0 /* Icon-Small@2x.png in Resources */,
+				96E3559A1782D775006C37E0 /* Icon@2x.png in Resources */,
+				96E3559D1782F650006C37E0 /* Icon.png in Resources */,
+				96E3559F1782FA26006C37E0 /* anonymousPicture.png in Resources */,
+				96E8A5F217AC389000B8318C /* settingsIcon.png in Resources */,
+				96D33BC317C817380066A4B2 /* results_filled.png in Resources */,
+				96D33BC517C817380066A4B2 /* comment_filled.png in Resources */,
+				96D33BD617C99BB90066A4B2 /* results_empty.png in Resources */,
+				96D33BD817C99BC30066A4B2 /* comment_empty.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,43 +586,82 @@
 			files = (
 				96009F5F160E02CD0029D062 /* main.m in Sources */,
 				96009F63160E02CD0029D062 /* DICHOAppDelegate.m in Sources */,
-				96009F6F160E02CE0029D062 /* DICHOFirstViewController.m in Sources */,
-				96009F76160E02CE0029D062 /* DICHOSecondViewController.m in Sources */,
+				96009F85160E06580029D062 /* DICHOMainViewController.m in Sources */,
+				9669C2DA17D5B1F3003F77B4 /* DICHOTutorial2ViewController.m in Sources */,
+				96289C05160E576700FEFFE9 /* DICHOSubmitViewController.m in Sources */,
+				96C945771641F351000F283F /* DICHOLogInViewController.m in Sources */,
+				96C9457E1642040C000F283F /* DICHOSettingsViewController.m in Sources */,
+				962CB59216583E9E0073ABAA /* DICHOAnsweringViewController.m in Sources */,
+				96BFC710165C907800DA1E07 /* DICHOSearchChooseViewController.m in Sources */,
+				96FA251B1666EC7E00E84ED1 /* DICHOHomeViewController.m in Sources */,
+				9669C2D217D1ADB8003F77B4 /* DICHOPictureViewController.m in Sources */,
+				9665C80D166704DC0003DC9A /* DICHOAskingViewController.m in Sources */,
+				964E51AB1674E2DA0061E33E /* DICHOResultsViewController.m in Sources */,
+				96CFDECF16782FB300BBE426 /* DICHOSearchUsernameViewController.m in Sources */,
+				9669C2DD17D5B20E003F77B4 /* DICHOTutorial3ViewController.m in Sources */,
+				9669C2D717D5B172003F77B4 /* DICHOTutorial1ViewController.m in Sources */,
+				9691D71F1680C2A90021AD3C /* DICHOSingleUserViewController.m in Sources */,
+				964154A91683D0C400B94FF2 /* DICHOSearchFullNameViewController.m in Sources */,
+				96A3759917D83BC20038ABC8 /* DICHOInterestingPeopleViewController.m in Sources */,
+				964154AC168410B800B94FF2 /* DICHOCreateAccountViewController.m in Sources */,
+				9631DF37168F8E2A00FB4E47 /* DICHONameViewController.m in Sources */,
+				9631DF3B168F8E4D00FB4E47 /* DICHOProfilePictureViewController.m in Sources */,
+				9631DF3E168F8E6400FB4E47 /* DICHOPasswordViewController.m in Sources */,
+				9631DF41168F8E8000FB4E47 /* DICHOEmailAddressViewController.m in Sources */,
+				9669C2E617D5B3C2003F77B4 /* DICHOTutorial6ViewController.m in Sources */,
+				9666C5BB16915C660027E3CF /* DICHOForgotPasswordViewController.m in Sources */,
+				96000CF7169580A600BA066D /* DICHODichoNavViewController.m in Sources */,
+				96CAFE3E169653B400067DA9 /* DICHOShowAnswerersViewController.m in Sources */,
+				96CA399C1740C0A3003C2286 /* DICHOSingleUserResultsViewController.m in Sources */,
+				96CA399F1740CBA5003C2286 /* DICHOSUShowAnswerersViewController.m in Sources */,
+				96716F4017D6C6AD0083CE60 /* DICHOContactUsViewController.m in Sources */,
+				96CA39A817434560003C2286 /* DICHOFavoritedViewController.m in Sources */,
+				9624C21D174E8A7000B1C336 /* DICHOSUAskingViewController.m in Sources */,
+				96A3759617D83B500038ABC8 /* DICHOPopularDichosViewController.m in Sources */,
+				9624C220174E8ADF00B1C336 /* DICHOSUAnsweringViewController.m in Sources */,
+				9624C223174FF21500B1C336 /* DICHOAnsweredViewController.m in Sources */,
+				9624C226175009A500B1C336 /* DICHOHomeResultsViewController.m in Sources */,
+				9669C2E317D5B395003F77B4 /* DICHOTutorial5ViewController.m in Sources */,
+				9624C22917500A3100B1C336 /* DICHOHomeShowAnswerersViewController.m in Sources */,
+				96E3BA9217531F670099D19F /* DICHOAsyncImageViewRound.m in Sources */,
+				9623D20E175D376A008F9C5B /* DICHOUsernameViewController.m in Sources */,
+				96E8A5EA17AA38C300B8318C /* DICHOHomeGroupsViewController.m in Sources */,
+				96E8A5ED17AAD51800B8318C /* DICHOCreateGroupViewController.m in Sources */,
+				96E8A5F017AB004200B8318C /* DICHOSingleGroupViewController.m in Sources */,
+				96271FA617AC5AAD00496F7C /* DICHOGroupMembersViewController.m in Sources */,
+				96271FA917ACCEEE00496F7C /* DICHOGroupAskViewController.m in Sources */,
+				96271FAD17AD756E00496F7C /* DICHOGroupSettingsViewController.m in Sources */,
+				96C2A52017ADDD9B00C563B1 /* DICHOGroupNameViewController.m in Sources */,
+				96C2A52417ADFF3800C563B1 /* DICHOGroupUsernameViewController.m in Sources */,
+				96C2A52717AE1AC800C563B1 /* DICHOGroupPictureViewController.m in Sources */,
+				964DDB7817AE399600A82637 /* DICHOGroupAdminViewController.m in Sources */,
+				964DDB7B17B0A20800A82637 /* DICHOGroupRequestsViewController.m in Sources */,
+				9669C2E017D5B27F003F77B4 /* DICHOTutorial4ViewController.m in Sources */,
+				964DDB7E17B0E57100A82637 /* DICHOGroupRemoveViewController.m in Sources */,
+				960B39EC17B20A0900659C3C /* DICHOSearchGroupsViewController.m in Sources */,
+				964C087017C02E2F0019BFAA /* DICHOCommentsViewController.m in Sources */,
+				9660786F17C40C9C0052F618 /* DICHOShowLikesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		96009F5B160E02CD0029D062 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96009F5C160E02CD0029D062 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		96009F6A160E02CD0029D062 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96009F6B160E02CE0029D062 /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		96009F7B160E02CE0029D062 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Brooks Buffington (BV43SW79X5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brooks Buffington (BV43SW79X5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -243,10 +671,13 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "415D0B75-6196-4DBD-A210-BEFE6C9B3254";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "415D0B75-6196-4DBD-A210-BEFE6C9B3254";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -255,19 +686,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Locus Engineering, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Locus Engineering, LLC";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "4E91A42E-4825-49F6-AEF6-BA211528D287";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4E91A42E-4825-49F6-AEF6-BA211528D287";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -276,10 +715,19 @@
 		96009F7E160E02CE0029D062 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Developer: Brooks Buffington (BV43SW79X5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Brooks Buffington (BV43SW79X5)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dicho/Dicho-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Dicho/Dicho-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "415D0B75-6196-4DBD-A210-BEFE6C9B3254";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "415D0B75-6196-4DBD-A210-BEFE6C9B3254";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -287,10 +735,19 @@
 		96009F7F160E02CE0029D062 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Locus Engineering, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Locus Engineering, LLC";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dicho/Dicho-Prefix.pch";
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "Dicho/Dicho-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4E91A42E-4825-49F6-AEF6-BA211528D287";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "4E91A42E-4825-49F6-AEF6-BA211528D287";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -314,6 +771,7 @@
 				96009F7F160E02CE0029D062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

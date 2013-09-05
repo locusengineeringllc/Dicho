@@ -13,6 +13,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSUserDefaults *prefs= [NSUserDefaults standardUserDefaults];
+    NSDictionary * defaults = [NSDictionary dictionaryWithObjectsAndKeys:
+                               
+                               @"no", @"loggedIn",
+                               @"", @"userID",
+                               @"Not Logged In", @"username",
+                               @"Not Logged In", @"name",
+                               @"", @"password",
+                               @"Not Logged In", @"email",
+                               @"no", @"firstTimeToDicho",
+                               @"no", @"firstTimeToSubmit",
+                               @"no", @"firstTimeToSearch",
+                               @"no", @"firstTimeToHome",
+                               @"0", @"firstTimeOpening",
+
+                               
+                               nil];
+    [prefs registerDefaults:defaults];
+    [prefs synchronize];
+    
     return YES;
 }
 							
@@ -42,5 +62,6 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end
