@@ -72,6 +72,7 @@
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.0 green:0.3 blue:0.6 alpha:1.0];
     
     ////
+    //hi
     
     [self.navigationController.navigationBar setTitleTextAttributes:
      
