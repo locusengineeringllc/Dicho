@@ -8,6 +8,7 @@
 
 #import "DICHOTutorial1ViewController.h"
 //IM CHANGING THIS FILLLLEEEEE
+//okkk
 @interface DICHOTutorial1ViewController ()
 
 @end
