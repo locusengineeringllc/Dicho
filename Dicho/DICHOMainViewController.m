@@ -79,7 +79,7 @@
      [NSDictionary dictionaryWithObjectsAndKeys:
       
       //[UIColor colorWithRed:0.0 green:0.3 blue:0.6 alpha:1.0], UITextAttributeTextColor,
-      [UIFont fontWithName:@"Arial-BoldMT" size:18.0], UITextAttributeFont,
+      //////[UIFont fontWithName:@"Arial-BoldMT" size:18.0], UITextAttributeFont,
       
       nil]];
     //self.navigationController.navigationBar.translucent = NO;
@@ -92,7 +92,7 @@
     //dichoTable.backgroundColor = [UIColor colorWithWhite:0.0 alpha:1.0];
     dichoTable.sectionFooterHeight= 5.0;
     dichoTable.sectionHeaderHeight = 0.0;
-    dichoTable.contentInset = UIEdgeInsetsMake(-13.0, 0, 0, 0);
+    ///////dichoTable.contentInset = UIEdgeInsetsMake(-13.0, 0, 0, 0);
     ////UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
     ///[tempImageView setFrame:dichoTable.frame];
     

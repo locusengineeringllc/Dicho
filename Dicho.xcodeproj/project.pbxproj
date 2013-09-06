@@ -242,7 +242,7 @@
 		96E8A5EE17AB004000B8318C /* DICHOSingleGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOSingleGroupViewController.h; sourceTree = "<group>"; };
 		96E8A5EF17AB004100B8318C /* DICHOSingleGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DICHOSingleGroupViewController.m; sourceTree = "<group>"; };
 		96E8A5F117AC389000B8318C /* settingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingsIcon.png; sourceTree = "<group>"; };
-		96F24EAC17D976980071FC55 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2013-08-26 at 4-1.34.04 PM.png"; path = "../../Dicho/Dicho/Screen Shot 2013-08-26 at 4-1.34.04 PM.png"; sourceTree = "<group>"; };
+		96F24EAC17D976980071FC55 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2013-08-26 at 4-1.34.04 PM.png"; sourceTree = "<group>"; };
 		96F76F29177ABFC80062F8A8 /* dicho_camera_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dicho_camera_blue.png; sourceTree = "<group>"; };
 		96F76F2D17801B390062F8A8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		96FA25191666EC7A00E84ED1 /* DICHOHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DICHOHomeViewController.h; sourceTree = "<group>"; };
@@ -299,6 +299,7 @@
 		96009F58160E02CD0029D062 /* Dicho */ = {
 			isa = PBXGroup;
 			children = (
+				96F24EAE17D97BC20071FC55 /* Tutorial */,
 				96CA39A11740D018003C2286 /* Main */,
 				96CA39A21740D023003C2286 /* Submit */,
 				96CA39A31740D02C003C2286 /* SearchNSingle */,
@@ -307,19 +308,6 @@
 				96009F61160E02CD0029D062 /* DICHOAppDelegate.h */,
 				96009F62160E02CD0029D062 /* DICHOAppDelegate.m */,
 				96CFDEC216782B6B00BBE426 /* MainStoryboard.storyboard */,
-				96F24EAC17D976980071FC55 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png */,
-				9669C2D517D5B172003F77B4 /* DICHOTutorial1ViewController.h */,
-				9669C2D617D5B172003F77B4 /* DICHOTutorial1ViewController.m */,
-				9669C2D817D5B1F3003F77B4 /* DICHOTutorial2ViewController.h */,
-				9669C2D917D5B1F3003F77B4 /* DICHOTutorial2ViewController.m */,
-				9669C2DB17D5B20E003F77B4 /* DICHOTutorial3ViewController.h */,
-				9669C2DC17D5B20E003F77B4 /* DICHOTutorial3ViewController.m */,
-				9669C2DE17D5B27F003F77B4 /* DICHOTutorial4ViewController.h */,
-				9669C2DF17D5B27F003F77B4 /* DICHOTutorial4ViewController.m */,
-				9669C2E117D5B395003F77B4 /* DICHOTutorial5ViewController.h */,
-				9669C2E217D5B395003F77B4 /* DICHOTutorial5ViewController.m */,
-				9669C2E417D5B3C2003F77B4 /* DICHOTutorial6ViewController.h */,
-				9669C2E517D5B3C2003F77B4 /* DICHOTutorial6ViewController.m */,
 				96E3BA9017531F670099D19F /* DICHOAsyncImageViewRound.h */,
 				96E3BA9117531F670099D19F /* DICHOAsyncImageViewRound.m */,
 				96000CF5169580A500BA066D /* DICHODichoNavViewController.h */,
@@ -490,6 +478,26 @@
 				96716F3F17D6C6AD0083CE60 /* DICHOContactUsViewController.m */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		96F24EAE17D97BC20071FC55 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				96F24EAC17D976980071FC55 /* Screen Shot 2013-08-26 at 4-1.34.04 PM.png */,
+				9669C2D517D5B172003F77B4 /* DICHOTutorial1ViewController.h */,
+				9669C2D617D5B172003F77B4 /* DICHOTutorial1ViewController.m */,
+				9669C2D817D5B1F3003F77B4 /* DICHOTutorial2ViewController.h */,
+				9669C2D917D5B1F3003F77B4 /* DICHOTutorial2ViewController.m */,
+				9669C2DB17D5B20E003F77B4 /* DICHOTutorial3ViewController.h */,
+				9669C2DC17D5B20E003F77B4 /* DICHOTutorial3ViewController.m */,
+				9669C2DE17D5B27F003F77B4 /* DICHOTutorial4ViewController.h */,
+				9669C2DF17D5B27F003F77B4 /* DICHOTutorial4ViewController.m */,
+				9669C2E117D5B395003F77B4 /* DICHOTutorial5ViewController.h */,
+				9669C2E217D5B395003F77B4 /* DICHOTutorial5ViewController.m */,
+				9669C2E417D5B3C2003F77B4 /* DICHOTutorial6ViewController.h */,
+				9669C2E517D5B3C2003F77B4 /* DICHOTutorial6ViewController.m */,
+			);
+			name = Tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
