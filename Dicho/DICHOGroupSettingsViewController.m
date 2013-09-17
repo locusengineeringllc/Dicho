@@ -133,7 +133,7 @@
         }
         
         DICHOAsyncImageViewRound* askerImage = [[DICHOAsyncImageViewRound alloc]
-                                                initWithFrame:CGRectMake(232, 2, 40, 40)];
+                                                initWithFrame:CGRectMake(242, 2, 40, 40)];
         askerImage.tag = 5;
         //use askerID/username to pull and store userImage
         NSString *imageUrl;
@@ -154,7 +154,7 @@
             cell.backgroundColor = [UIColor whiteColor];
             cell.selectionStyle = UITableViewCellSelectionStyleBlue;
             
-            deleteLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 11, 200, 21)];
+            deleteLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 11, 220, 21)];
             deleteLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:16.0];
             deleteLabel.textAlignment = NSTextAlignmentCenter;
             deleteLabel.text = @"Delete Group";
@@ -184,7 +184,7 @@
             contentTypeLabel.textAlignment = NSTextAlignmentLeft;
             [cell.contentView addSubview:contentTypeLabel];
             
-            contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 11, 122, 21)];
+            contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(150, 11, 132, 21)];
             contentLabel.tag = 2;
             contentLabel.font = [UIFont fontWithName:@"ArialMT" size:16.0];
             contentLabel.textColor = [UIColor darkGrayColor];

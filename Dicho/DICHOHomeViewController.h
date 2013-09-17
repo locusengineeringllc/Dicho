@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DICHOHomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface DICHOHomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 {
     NSArray *homeNumbersStringComponents;
     
@@ -89,6 +89,8 @@
 -(void)handleVotingFail;
 @property BOOL votingForFirst;
 
+-(IBAction)share:(id)sender;
+@property int shareSection;
 -(IBAction)starADicho:(id)sender;
 -(void)handleGoodStar;
 -(void)handleStarringFail;

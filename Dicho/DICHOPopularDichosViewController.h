@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DICHOPopularDichosViewController : UITableViewController
+@interface DICHOPopularDichosViewController : UITableViewController <UIActionSheetDelegate>
 {
     NSMutableArray *dichoIDsArray;
     NSMutableArray *dichosArray;
@@ -37,6 +37,8 @@
     NSUserDefaults *prefs;
 }
 
+-(IBAction)share:(id)sender;
+@property int shareSection;
 -(IBAction)starADicho:(id)sender;
 -(IBAction)showThePicture:(id)sender;
 

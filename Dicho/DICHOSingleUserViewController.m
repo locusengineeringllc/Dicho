@@ -13,6 +13,7 @@
 #import "DICHOSUAnsweringViewController.h"
 #import "DICHOCommentsViewController.h"
 #import "DICHOPictureViewController.h"
+#import <Social/Social.h>
 
 @interface DICHOSingleUserViewController ()
 
@@ -25,6 +26,7 @@
 @synthesize votingSection;
 @synthesize votingForFirst;
 @synthesize starringSection;
+@synthesize shareSection;
 @synthesize progressAlert;
 @synthesize loadedAll;
 @synthesize loadingMore;
@@ -138,14 +140,14 @@
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section==0)
-        return 180;
+        return 178;
     if([dichoIDsArray count] != 0){
         if(indexPath.section == [dichoIDsArray count]+1)
             return 44;
         else{
             if(indexPath.row==0){
                 NSString *text = [dichosArray objectAtIndex:(indexPath.section-1)];
-                CGSize constraint = CGSizeMake(280, 20000.0f);
+                CGSize constraint = CGSizeMake(292, 20000.0f);
                 CGSize size = [text sizeWithFont:[UIFont fontWithName:@"ArialMT" size:16.0f] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
                 CGFloat height = MAX(size.height, 13.0f);
                 return height + 150;
@@ -186,40 +188,42 @@
             topCell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             //create and add userpicture, name, username
-            userPicture = [[UIImageView alloc] initWithFrame:CGRectMake(6, 6, 120, 120)];
+            userPicture = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 120, 120)];
             userPicture.tag = 1;
             userPicture.backgroundColor = [UIColor lightGrayColor];
-            //userPicture.image = userImage;
             userPicture.contentMode = UIViewContentModeScaleAspectFill;
             userPicture.clipsToBounds = YES;
             [topCell.contentView addSubview:userPicture];
             
-            fullnameLabel = [[UILabel alloc] initWithFrame:CGRectMake(6, 132, 294, 21)];
+            fullnameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 132, 300, 21)];
             fullnameLabel.text = name;
             fullnameLabel.textColor = [UIColor blackColor];
             fullnameLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:15.0f];
             fullnameLabel.textAlignment = NSTextAlignmentLeft;
-            fullnameLabel.backgroundColor = [UIColor clearColor];
+            fullnameLabel.adjustsFontSizeToFitWidth = YES;
+            fullnameLabel.backgroundColor = [UIColor whiteColor];
             [topCell.contentView addSubview:fullnameLabel];
             
-            usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(6, 151, 240, 21)];
+            usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 151, 300, 21)];
             usernameLabel.text = [NSString stringWithFormat:@"@%@", username];
             usernameLabel.textColor = [UIColor darkGrayColor];
             usernameLabel.font = [UIFont fontWithName:@"ArialMT" size:15.0f];
             usernameLabel.textAlignment = NSTextAlignmentLeft;
+            usernameLabel.adjustsFontSizeToFitWidth = YES;
             usernameLabel.backgroundColor = [UIColor clearColor];
             [topCell.contentView addSubview:usernameLabel];
             
             //create and add dichos number label, label, and button
-            dichosNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(126, 8, 120, 20)];
+            dichosNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 12, 120, 20)];
             dichosNumberLabel.text = dichosNumber;
             dichosNumberLabel.textColor = [UIColor blackColor];
             dichosNumberLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:15.0f];
             dichosNumberLabel.textAlignment = NSTextAlignmentCenter;
+            dichosNumberLabel.adjustsFontSizeToFitWidth = YES;
             dichosNumberLabel.backgroundColor = [UIColor clearColor];
             [topCell.contentView addSubview:dichosNumberLabel];
             
-            dichosLabel = [[UILabel alloc] initWithFrame:CGRectMake(126, 21, 120, 20)];
+            dichosLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 25, 120, 20)];
             dichosLabel.text = @"Dichos";
             dichosLabel.textColor = [UIColor darkGrayColor];
             dichosLabel.font = [UIFont fontWithName:@"ArialMT" size:14.0f];
@@ -228,22 +232,33 @@
             [topCell.contentView addSubview:dichosLabel];
             
             dichosButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [dichosButton setFrame:CGRectMake(126, 6, 120, 41)];
+            [dichosButton setFrame:CGRectMake(130, 10, 120, 41)];
             [dichosButton setUserInteractionEnabled:NO];
             dichosButton.layer.borderColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0].CGColor;
             dichosButton.layer.borderWidth = 1.0;
+            CAGradientLayer *btnGradient2 = [CAGradientLayer layer];
+            btnGradient2.frame = dichosButton.bounds;
+            btnGradient2.colors = [NSArray arrayWithObjects:
+                                  (id)[UIColor colorWithWhite:1.0f alpha:0.4f].CGColor,
+                                  (id)[UIColor colorWithWhite:1.0f alpha:0.2f].CGColor,
+                                  (id)[UIColor colorWithWhite:0.75f alpha:0.2f].CGColor,
+                                  (id)[UIColor colorWithWhite:0.4f alpha:0.2f].CGColor,
+                                  (id)[UIColor colorWithWhite:1.0f alpha:0.4f].CGColor,
+                                  nil];
+            [dichosButton.layer insertSublayer:btnGradient2 atIndex:0];
             [topCell.contentView addSubview:dichosButton];
             
             //create and add answerers number label, label, and button
-            answerersNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(126, 48, 120, 20)];
+            answerersNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 52, 120, 20)];
             answerersNumberLabel.text = answerersNumber;
             answerersNumberLabel.textColor = [UIColor blackColor];
             answerersNumberLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:15.0f];
             answerersNumberLabel.textAlignment = NSTextAlignmentCenter;
+            answerersNumberLabel.adjustsFontSizeToFitWidth = YES;
             answerersNumberLabel.backgroundColor = [UIColor clearColor];
             [topCell.contentView addSubview:answerersNumberLabel];
             
-            answerersLabel = [[UILabel alloc] initWithFrame:CGRectMake(126, 61, 120, 20)];
+            answerersLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 65, 120, 20)];
             answerersLabel.text = @"Answerers";
             answerersLabel.textColor = [UIColor darkGrayColor];
             answerersLabel.font = [UIFont fontWithName:@"ArialMT" size:14.0f];
@@ -252,24 +267,35 @@
             [topCell.contentView addSubview:answerersLabel];
             
             answerersButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [answerersButton setFrame:CGRectMake(126, 45, 120, 42)];
+            [answerersButton setFrame:CGRectMake(130, 49, 120, 42)];
             [answerersButton setUserInteractionEnabled:YES];
             answerersButton.showsTouchWhenHighlighted = YES;
             answerersButton.layer.borderColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0].CGColor;
             answerersButton.layer.borderWidth = 1.0;
             [answerersButton addTarget:self action:@selector(goToAsking:) forControlEvents:UIControlEventTouchUpInside];
+            CAGradientLayer *btnGradient3 = [CAGradientLayer layer];
+            btnGradient3.frame = answerersButton.bounds;
+            btnGradient3.colors = [NSArray arrayWithObjects:
+                                   (id)[UIColor colorWithWhite:1.0f alpha:0.4f].CGColor,
+                                   (id)[UIColor colorWithWhite:1.0f alpha:0.2f].CGColor,
+                                   (id)[UIColor colorWithWhite:0.75f alpha:0.2f].CGColor,
+                                   (id)[UIColor colorWithWhite:0.4f alpha:0.2f].CGColor,
+                                   (id)[UIColor colorWithWhite:1.0f alpha:0.4f].CGColor,
+                                   nil];
+            [answerersButton.layer insertSublayer:btnGradient3 atIndex:0];
             [topCell.contentView addSubview:answerersButton];
             
             //create and add answering number label, label, and button
-            answeringNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(126, 88, 120, 20)];
+            answeringNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 92, 120, 20)];
             answeringNumberLabel.text = answeringNumber;
             answeringNumberLabel.textColor = [UIColor blackColor];
             answeringNumberLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:15.0f];
             answeringNumberLabel.textAlignment = NSTextAlignmentCenter;
+            answeringNumberLabel.adjustsFontSizeToFitWidth = YES;
             answeringNumberLabel.backgroundColor = [UIColor clearColor];
             [topCell.contentView addSubview:answeringNumberLabel];
             
-            answeringLabel = [[UILabel alloc] initWithFrame:CGRectMake(126, 101, 120, 20)];
+            answeringLabel = [[UILabel alloc] initWithFrame:CGRectMake(130, 105, 120, 20)];
             answeringLabel.text = @"Answering";
             answeringLabel.textColor = [UIColor darkGrayColor];
             answeringLabel.font = [UIFont fontWithName:@"ArialMT" size:14.0f];
@@ -278,16 +304,26 @@
             [topCell.contentView addSubview:answeringLabel];
             
             answereringButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            [answereringButton setFrame:CGRectMake(126, 85, 120, 41)];
+            [answereringButton setFrame:CGRectMake(130, 89, 120, 41)];
             [answereringButton setUserInteractionEnabled:YES];
             answereringButton.showsTouchWhenHighlighted = YES;
             answereringButton.layer.borderColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0].CGColor;
             answereringButton.layer.borderWidth = 1.0;
             [answereringButton addTarget:self action:@selector(goToAnswering:) forControlEvents:UIControlEventTouchUpInside];
+            CAGradientLayer *btnGradient4 = [CAGradientLayer layer];
+            btnGradient4.frame = answereringButton.bounds;
+            btnGradient4.colors = [NSArray arrayWithObjects:
+                                   (id)[UIColor colorWithWhite:1.0f alpha:0.4f].CGColor,
+                                   (id)[UIColor colorWithWhite:1.0f alpha:0.2f].CGColor,
+                                   (id)[UIColor colorWithWhite:0.75f alpha:0.2f].CGColor,
+                                   (id)[UIColor colorWithWhite:0.4f alpha:0.2f].CGColor,
+                                   (id)[UIColor colorWithWhite:1.0f alpha:0.4f].CGColor,
+                                   nil];
+            [answereringButton.layer insertSublayer:btnGradient4 atIndex:0];
             [topCell.contentView addSubview:answereringButton];
             
             //create and add custom answer button and its label
-            answerButtonLabel = [[UILabel alloc] initWithFrame:CGRectMake(268, 5, 10, 120)];
+            answerButtonLabel = [[UILabel alloc] initWithFrame:CGRectMake(280, 9, 10, 120)];
             answerButtonLabel.font = [UIFont fontWithName:@"ArialRoundedMTBold" size:10.0f];
             answerButtonLabel.numberOfLines = 9;
             answerButtonLabel.backgroundColor = [UIColor clearColor];
@@ -296,7 +332,7 @@
             
             customAnswerButton = [UIButton buttonWithType:UIButtonTypeCustom];
             [customAnswerButton addTarget:self action:@selector(answer:) forControlEvents:UIControlEventTouchUpInside];
-            [customAnswerButton setFrame:CGRectMake(258, 6, 30, 120)];
+            [customAnswerButton setFrame:CGRectMake(269, 10, 32, 120)];
             [customAnswerButton setUserInteractionEnabled:YES];
             customAnswerButton.layer.masksToBounds = NO;
             customAnswerButton.layer.cornerRadius = 5.0f;
@@ -325,7 +361,7 @@
                 answerButtonLabel.textColor = [UIColor colorWithRed:0.0 green:0.3 blue:0.6 alpha:1.0];
                 customAnswerButton.backgroundColor = [UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1.0];
                 customAnswerButton.layer.borderColor = [UIColor colorWithRed:0.0 green:0.3 blue:0.6 alpha:1.0].CGColor;
-                customAnswerButton.layer.borderWidth = 1.0;
+                customAnswerButton.layer.borderWidth = 2.0;
             }
             [topCell.contentView addSubview:customAnswerButton];
             [topCell.contentView addSubview:answerButtonLabel];
@@ -389,37 +425,40 @@
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 
                 //create, format, and add username label
-                nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(58, 10, 242, 21)];
+                nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(62, 10, 219, 21)];
                 nameLabel.tag = 1;
                 nameLabel.text = name;
                 nameLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:13.0f];
                 nameLabel.textAlignment = NSTextAlignmentLeft;
                 nameLabel.textColor = [UIColor blackColor];
                 nameLabel.backgroundColor = [UIColor clearColor];
+                nameLabel.adjustsFontSizeToFitWidth = YES;
                 [cell.contentView addSubview:nameLabel];
                 
                 //create, format, and add name label
-                usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(58, 26, 239, 21)];
+                usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(62, 26, 206, 21)];
                 usernameLabel.tag = 2;
                 usernameLabel.text = [NSString stringWithFormat:@"@%@", username];
                 usernameLabel.font = [UIFont fontWithName:@"ArialMT" size:13.0f];
                 usernameLabel.textAlignment = NSTextAlignmentLeft;
-                usernameLabel.textColor = [UIColor darkGrayColor];
+                usernameLabel.textColor = [UIColor colorWithWhite:0.55 alpha:1.0];
                 usernameLabel.backgroundColor = [UIColor clearColor];
+                usernameLabel.adjustsFontSizeToFitWidth = YES;
+
                 [cell.contentView addSubview:usernameLabel];
                 
                 //create, format, and add time label
-                timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(227, 3, 70, 15)];
+                timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(247, 3, 70, 15)];
                 timeLabel.tag = 3;
                 timeLabel.font = [UIFont fontWithName:@"ArialMT" size:11.0f];
                 timeLabel.textAlignment = NSTextAlignmentRight;
-                timeLabel.textColor = [UIColor darkGrayColor];
+                timeLabel.textColor = [UIColor colorWithWhite:0.55 alpha:1.0];
                 timeLabel.backgroundColor = [UIColor clearColor];
                 [cell.contentView addSubview:timeLabel];
                 
                 
                 //create, get image, and add imageView
-                askerPicture = [[UIImageView alloc] initWithFrame:CGRectMake(6, 6, 45, 46)];
+                askerPicture = [[UIImageView alloc] initWithFrame:CGRectMake(10, 6, 46, 46)];
                 askerPicture.tag = 5;
                 askerPicture.backgroundColor = [UIColor lightGrayColor];
                 askerPicture.layer.cornerRadius = 5.0;
@@ -440,22 +479,22 @@
                 [cell.contentView addSubview:questionLabel];
                 
                 NSString *text = [dichosArray objectAtIndex:indexPath.section-1];
-                CGSize constraint = CGSizeMake(280, 20000.0f);
+                CGSize constraint = CGSizeMake(292, 20000.0f);
                 CGSize size = [text sizeWithFont:[UIFont fontWithName:@"ArialMT" size:16.0f] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
             
                 //create, format, and add firstVotes label
-                firstVotesLabel = [[UILabel alloc] initWithFrame:CGRectMake(258, 75+MAX(size.height, 13.0f), 42, 25)];
+                firstVotesLabel = [[UILabel alloc] initWithFrame:CGRectMake(272, 75+MAX(size.height, 13.0f), 38, 25)];
                 firstVotesLabel.tag = 12;
-                firstVotesLabel.font = [UIFont fontWithName:@"ArialMT" size:14.0f];
+                firstVotesLabel.font = [UIFont fontWithName:@"ArialMT" size:16.0f];
                 firstVotesLabel.adjustsFontSizeToFitWidth = YES;
                 firstVotesLabel.textAlignment = NSTextAlignmentCenter;
                 firstVotesLabel.textColor = [UIColor colorWithWhite:0.55 alpha:1.0];
-                firstVotesLabel.backgroundColor = [UIColor clearColor];
+                firstVotesLabel.backgroundColor = [UIColor whiteColor];
                 [cell.contentView addSubview:firstVotesLabel];
                 
                 UIButton *firstAnswerButton = [UIButton buttonWithType:UIButtonTypeCustom];
                 firstAnswerButton.tag = 7;
-                [firstAnswerButton setFrame:CGRectMake(6, 75+MAX(size.height, 13.0f), 250, 25)];
+                [firstAnswerButton setFrame:CGRectMake(10, 75+MAX(size.height, 13.0f), 260, 25)];
                 [firstAnswerButton setTitle:[firstAnswersArray objectAtIndex:indexPath.section-1] forState:UIControlStateNormal];
                 firstAnswerButton.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:16.0f];
                 firstAnswerButton.titleLabel.adjustsFontSizeToFitWidth = YES;
@@ -474,18 +513,18 @@
                 firstAnswerButton.showsTouchWhenHighlighted = YES;
                 
                 //create, format, and add secondVotes label
-                secondVotesLabel = [[UILabel alloc] initWithFrame:CGRectMake(258, 110+MAX(size.height, 13.0f), 42, 25)];
+                secondVotesLabel = [[UILabel alloc] initWithFrame:CGRectMake(272, 110+MAX(size.height, 13.0f), 38, 25)];
                 secondVotesLabel.tag = 13;
-                secondVotesLabel.font = [UIFont fontWithName:@"ArialMT" size:14.0f];
+                secondVotesLabel.font = [UIFont fontWithName:@"ArialMT" size:16.0f];
                 secondVotesLabel.adjustsFontSizeToFitWidth = YES;
                 secondVotesLabel.textAlignment = NSTextAlignmentCenter;
                 secondVotesLabel.textColor = [UIColor colorWithWhite:0.55 alpha:1.0];
-                secondVotesLabel.backgroundColor = [UIColor clearColor];
+                secondVotesLabel.backgroundColor = [UIColor whiteColor];
                 [cell.contentView addSubview:secondVotesLabel];
                 
                 UIButton *secondAnswerButton = [UIButton buttonWithType:UIButtonTypeCustom];
                 secondAnswerButton.tag = 8;
-                [secondAnswerButton setFrame:CGRectMake(6, 110+MAX(size.height, 13.0f), 250, 25)];
+                [secondAnswerButton setFrame:CGRectMake(10, 110+MAX(size.height, 13.0f), 260, 25)];
                 [secondAnswerButton setTitle:[secondAnswersArray objectAtIndex:indexPath.section-1] forState:UIControlStateNormal];
                 secondAnswerButton.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:16.0f];
                 secondAnswerButton.titleLabel.adjustsFontSizeToFitWidth = YES;
@@ -564,7 +603,7 @@
                 UIButton *pictureButton = [UIButton buttonWithType:UIButtonTypeCustom];
                 pictureButton.tag = 10;
                 [pictureButton addTarget:self action:@selector(showThePicture:) forControlEvents:UIControlEventTouchUpInside];
-                [pictureButton setFrame:CGRectMake(266, 26, 35, 28)];
+                [pictureButton setFrame:CGRectMake(268, 24, 45, 36)];
                 if([[picturesArray objectAtIndex:indexPath.section-1] isEqualToString:@"1"]){
                     [pictureButton setBackgroundImage:[UIImage imageNamed:@"dicho_camera_blue.png"] forState:UIControlStateNormal];
                     [pictureButton setEnabled:YES];
@@ -655,27 +694,27 @@
             
             questionLabel.text =[dichosArray objectAtIndex:indexPath.section-1];
             NSString *text = [dichosArray objectAtIndex:indexPath.section-1];
-            CGSize constraint = CGSizeMake(280, 20000.0f);
+            CGSize constraint = CGSizeMake(292, 20000.0f);
             CGSize size = [text sizeWithFont:[UIFont fontWithName:@"ArialMT" size:16.0f] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
-            [questionLabel setFrame:CGRectMake(6, 65, 288, MAX(size.height, 13.0f))];
+            [questionLabel setFrame:CGRectMake(10, 65, 300, MAX(size.height, 13.0f))];
             
-            [firstVotesLabel setFrame:CGRectMake(258, 75+MAX(size.height, 13.0f), 42, 25)];
-            [secondVotesLabel setFrame:CGRectMake(258, 110+MAX(size.height, 13.0f), 42, 25)];
+            [firstVotesLabel setFrame:CGRectMake(272, 75+MAX(size.height, 13.0f), 38, 25)];
+            [secondVotesLabel setFrame:CGRectMake(272, 110+MAX(size.height, 13.0f), 38, 25)];
             
             [firstAnswerButton setTitle:[firstAnswersArray objectAtIndex:indexPath.section-1] forState:UIControlStateNormal];
-            [firstAnswerButton setFrame:CGRectMake(6, 75+MAX(size.height, 13.0f), 250, 25)];
+            [firstAnswerButton setFrame:CGRectMake(10, 75+MAX(size.height, 13.0f), 260, 25)];
             
             [secondAnswerButton setTitle:[secondAnswersArray objectAtIndex:indexPath.section-1] forState:UIControlStateNormal];
-            [secondAnswerButton setFrame:CGRectMake(6, 110+MAX(size.height, 13.0f), 250, 25)];
+            [secondAnswerButton setFrame:CGRectMake(10, 110+MAX(size.height, 13.0f), 260, 25)];
             
-            [pictureButton setFrame:CGRectMake(266, 26, 35, 28)];
+            [pictureButton setFrame:CGRectMake(268, 24, 45, 36)];
             
             return cell;
             
         }else if(indexPath.row==1) {
             static NSString *CellIdentifier = @"questionInfoCell";
             
-            UILabel *dateLabel;
+            UIButton *shareButton;
             UIButton *starButton;
             UIButton *resultsButton;
             UIButton *commentsButton;
@@ -689,13 +728,14 @@
                 cell.backgroundColor = [UIColor whiteColor];
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 
-                //create, position, and add date label
-                dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(13, 10, 80, 21)];
-                dateLabel.tag = 1;
-                dateLabel.font = [UIFont fontWithName:@"ArialMT" size:14.0f];
-                dateLabel.textAlignment = NSTextAlignmentLeft;
-                dateLabel.textColor = [UIColor darkGrayColor];
-                [cell.contentView addSubview:dateLabel];
+                //create, position, and add share button
+                shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+                shareButton.tag = 1;
+                shareButton.showsTouchWhenHighlighted = YES;
+                [shareButton addTarget:self action:@selector(share:) forControlEvents:UIControlEventTouchUpInside];
+                [shareButton setFrame:CGRectMake(15, 4, 36, 36)];
+                [shareButton setImage:[UIImage imageNamed:@"shareButton.png"] forState:UIControlStateNormal];
+                [cell.contentView addSubview:shareButton];
                 
                 //create, position, and add comments button and label
                 commentsButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -757,7 +797,7 @@
                 [cell.contentView addSubview:starButton];
                 
             }else{
-                dateLabel = (UILabel *)[cell.contentView viewWithTag:1];
+                shareButton = (UIButton *)[cell.contentView viewWithTag:1];
                 commentsButton = (UIButton *)[cell.contentView viewWithTag:2];
                 commentsLabel = (UILabel *)[cell.contentView viewWithTag:3];
                 resultsButton = (UIButton *)[cell.contentView viewWithTag:4];
@@ -795,8 +835,6 @@
                 
             }
             
-            dateLabel.text = [NSString stringWithFormat:@"%@", [datesArray objectAtIndex:indexPath.section-1]];
-            
             return cell;
             
         }
@@ -808,21 +846,12 @@
 #pragma mark - Table view delegate
     
 - (IBAction)showThePicture:(id)sender {
-    /*pictureAlert= [[UIAlertView alloc] initWithTitle:nil message:@"\n\n\n\n\n\n\n\n\n\n\n\n\n" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-    [pictureAlert show];*/
     NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell*)[[[sender superview] superview]superview]];
     
     DICHOPictureViewController *pictureView = [[DICHOPictureViewController alloc] initWithDichoID:[dichoIDsArray objectAtIndex:indexPath.section-1]];
     [pictureView setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
     [self presentViewController:pictureView animated:YES completion:NULL];
     
-   /* UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 265, 285)];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    NSString *imageUrl= [NSString stringWithFormat:@"http://dichoapp.com/dichoImages/%@.jpeg", [dichoIDsArray objectAtIndex:indexPath.section-1]];
-    UIImage *dichoImage = [UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString:imageUrl]]];
-    imageView.image = dichoImage;
-    imageView.backgroundColor=[UIColor clearColor];
-    [pictureAlert addSubview:imageView];*/
 }
 
 
@@ -1230,6 +1259,43 @@
     UIAlertView *starringFail = [[UIAlertView alloc] initWithTitle:@"Connection error." message:@"Please make sure you have a stable internet connection and try again." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     [starringFail show];
 }
+
+-(IBAction)share:(id)sender{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell*)[[[sender superview] superview]superview]];
+    shareSection = indexPath.section;
+    
+    UIActionSheet *shareSheet = [[UIActionSheet alloc] initWithTitle:@"Share this Dicho" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Twitter", @"Facebook", @"Copy Link", nil];
+    [shareSheet showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSString *dichoID = [dichoIDsArray objectAtIndex:shareSection-1];
+    NSString *dichoURL = [NSString stringWithFormat:@"http://dichoapp.com/files/webDicho.php?dhcd=%@", dichoID];
+    
+    if (buttonIndex == 0) {
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+        {
+            SLComposeViewController *tweetSheet = [SLComposeViewController
+                                                   composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [tweetSheet setInitialText:@"Check out this Dicho!"];
+            [tweetSheet addURL:[NSURL URLWithString:dichoURL]];
+            
+            [self presentViewController:tweetSheet animated:YES completion:nil];
+        }
+    } else if (buttonIndex == 1) {
+        if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            
+            [controller setInitialText:@"Check out this Dicho!"];
+            [controller addURL:[NSURL URLWithString:dichoURL]]; //format with dichoID
+            
+            [self presentViewController:controller animated:YES completion:Nil];
+        }
+    } else if (buttonIndex == 2) {
+        [UIPasteboard generalPasteboard].string = dichoURL;
+    }
+}
+
 
 -(IBAction)goToComments:(id)sender{
     NSIndexPath *indexPath = [self.tableView indexPathForCell:(UITableViewCell*)[[[sender superview] superview]superview]];

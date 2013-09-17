@@ -181,7 +181,7 @@
                                 
                 //check for picture and handle if so
                 if(hasPicture == 1){
-                    NSData *imageData = UIImageJPEGRepresentation(selectedImage.image, .1);
+                    NSData *imageData = UIImageJPEGRepresentation(selectedImage.image, .5);
                    
                     [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
                     [body appendData:[@"Content-Disposition: form-data; name=\"userfile\"; filename=\".jpeg\"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
@@ -203,7 +203,6 @@
 -(void)parseSubmitData{
     NSString *strData = [[NSString alloc]initWithData:submitData encoding:NSUTF8StringEncoding];
     [submitAlert dismissWithClickedButtonIndex:0 animated:YES];
-    NSLog(strData);
 
     if([strData isEqualToString:@"1"]){
         submitAlert= [[UIAlertView alloc] initWithTitle:@"Dicho asked successfully." message:nil delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];

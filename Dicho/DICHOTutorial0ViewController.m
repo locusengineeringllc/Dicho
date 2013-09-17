@@ -1,18 +1,18 @@
 //
-//  DICHOTutorial5ViewController.m
+//  DICHOTutorial0ViewController.m
 //  Dicho
 //
-//  Created by Tyler Droll on 9/3/13.
+//  Created by Tyler Droll on 9/17/13.
 //  Copyright (c) 2013 Locus Engineering LLC. All rights reserved.
 //
 
-#import "DICHOTutorial5ViewController.h"
+#import "DICHOTutorial0ViewController.h"
 
-@interface DICHOTutorial5ViewController ()
+@interface DICHOTutorial0ViewController ()
 
 @end
 
-@implementation DICHOTutorial5ViewController
+@implementation DICHOTutorial0ViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,12 +33,6 @@
                                            action:@selector(handleSwipeLeft)];
     swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.view addGestureRecognizer:swipeLeft];
-    
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc]
-                                            initWithTarget:self
-                                            action:@selector(handleSwipeRight)];
-    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [self.view addGestureRecognizer:swipeRight];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,11 +42,7 @@
 }
 
 -(void)handleSwipeLeft{
-    [self performSegueWithIdentifier:@"5to6" sender:self];
-}
-
--(void)handleSwipeRight{
-    [self performSegueWithIdentifier:@"5to4" sender:self];
+    [self performSegueWithIdentifier:@"0to1" sender:self];
 }
 
 @end

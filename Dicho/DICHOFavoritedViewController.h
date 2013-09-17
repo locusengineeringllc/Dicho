@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DICHOFavoritedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface DICHOFavoritedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 
 {
     NSMutableArray *dichoIDsArray;
@@ -24,7 +24,7 @@
     NSMutableArray *secondAnswersArray;
     NSMutableArray *secondVotesArray;
     NSMutableArray *answeredsArray;
-    NSMutableArray *picturesArray; //stores whether or not dicho has picture attached
+    NSMutableArray *picturesArray;
     NSMutableArray *commentsArray;
 
     NSURLConnection *getDichosConnection;
@@ -40,6 +40,8 @@
 -(IBAction)showThePicture:(id)sender;
 @property (nonatomic) IBOutlet UIAlertView *pictureAlert;
 
+-(IBAction)share:(id)sender;
+@property int shareSection;
 
 -(IBAction)voteForFirst:(id)sender;
 @property (nonatomic) IBOutlet UIAlertView *firstVoteAlert;

@@ -9,6 +9,7 @@
 #import "DICHOSettingsViewController.h"
 #import "DICHOAsyncImageViewRound.h"
 #import <QuartzCore/QuartzCore.h>
+#import <Parse/Parse.h>
 
 
 @interface DICHOSettingsViewController ()
@@ -55,10 +56,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if(section == 0)
         return 5;
-    if(section == 1)
-        return 2;
-    else
+    if(section == 2)
         return 1;
+    else
+        return 2;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -136,8 +137,11 @@
     }else if(indexPath.section==2){
         [cell2Label setText:@"Create Account"];
         return cell2;
-    }else{
+    }else if(indexPath.section == 3 && indexPath.row == 0){
         [cell2Label setText:@"Contact Us"];
+        return cell2;
+    }else{
+        [cell2Label setText:@"Dicho Tutorial"];
         return cell2;
     }
         
@@ -182,17 +186,21 @@
         [prefs setObject:@"Not Logged In" forKey:@"email"];
         [prefs setObject:@"" forKey:@"password"];
         
+        PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+        currentInstallation.channels = [NSArray array]; //remove channels for this device
+        [currentInstallation saveEventually]; //save empty channel array
+        [prefs setObject:@"0" forKey:@"hasSetPushChannel"];
+        
         
         [settingsTable reloadData];
         alert= [[UIAlertView alloc] initWithTitle:@"You Are Logged Out" message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         [alert show];
     }else if(indexPath.section==2 && indexPath.row==0){
         [self performSegueWithIdentifier:@"settingsToCreateAccount" sender:self];
-    }else if(indexPath.section==3){
+    }else if(indexPath.section==3 && indexPath.row== 0){
         [self performSegueWithIdentifier:@"settingsToContactUs" sender:self];
-
-        //alert= [[UIAlertView alloc] initWithTitle:@"Talk to Us" message:@"If you have any issues, comments, suggestions, or questions regarding the app then please email us. We love getting feedback from our users! \n\n support@dichoapp.com" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-        //[alert show];
+    }else if(indexPath.section==3 && indexPath.row==1){
+        [self performSegueWithIdentifier:@"settingsToTutorial" sender:self];
     }
     
     

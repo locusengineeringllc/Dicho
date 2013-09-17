@@ -38,7 +38,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    //background color  black
     self.view.backgroundColor = [UIColor blackColor];
     
     //add button for dismiss
@@ -46,9 +45,7 @@
     dismissButton.frame = CGRectMake(100, self.view.bounds.size.height-80, 120, 80);
     [dismissButton setTitle:@"Dismiss" forState:UIControlStateNormal];
     [dismissButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //dismissButton.titleLabel.text = @"Dismiss";
     dismissButton.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:16.0];
-    //dismissButton.titleLabel.textColor = [UIColor whiteColor];
     [dismissButton addTarget:self action:@selector(dismissView:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:dismissButton];
     

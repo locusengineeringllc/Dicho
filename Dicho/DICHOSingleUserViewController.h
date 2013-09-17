@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DICHOSingleUserViewController : UITableViewController
+@interface DICHOSingleUserViewController : UITableViewController <UIActionSheetDelegate>
 {
     BOOL answering;
     NSMutableArray *dichoIDsArray;
@@ -51,7 +51,8 @@
 }
 -(id)initWithUsername: (NSString *)givenUsername askerID: (NSString*)askerID;
 
-
+-(IBAction)share:(id)sender;
+@property int shareSection;
 -(IBAction)starADicho:(id)sender;
 -(IBAction)showThePicture:(id)sender;
 -(IBAction)answer:(id)sender;

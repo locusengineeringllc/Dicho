@@ -52,7 +52,7 @@
     self.view.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1.0];
     
     //make comment box
-    commentTextView = [[UITextView alloc] initWithFrame:CGRectMake(7, self.view.bounds.size.height-90, 253, 33)];    //134, 33
+    commentTextView = [[UITextView alloc] initWithFrame:CGRectMake(7, self.view.bounds.size.height-90, 253, 33)];
     commentTextView.text = @"Add a comment...";
     commentTextView.font = [UIFont fontWithName:@"ArialMT" size:14.0];
     commentTextView.textAlignment = NSTextAlignmentLeft;
@@ -69,7 +69,7 @@
     //create and add post button and title
     postButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [postButton addTarget:self action:@selector(postComment:) forControlEvents:UIControlEventTouchUpInside];
-    [postButton setFrame:CGRectMake(267, self.view.bounds.size.height-90, 46, 33)]; //134
+    [postButton setFrame:CGRectMake(267, self.view.bounds.size.height-90, 46, 33)];
     [postButton setTitle:@"Post" forState:UIControlStateNormal];
     postButton.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:14.0f];
     postButton.backgroundColor = [UIColor colorWithRed:0.0 green:0.45 blue:0.9 alpha:0.5];
@@ -81,7 +81,7 @@
     [self.view addSubview:postButton];
     
     //make comments table
-    commentsTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 320, self.view.bounds.size.height-161) style:UITableViewStylePlain];//was -47
+    commentsTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, 320, self.view.bounds.size.height-161) style:UITableViewStylePlain];
     commentsTable.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     commentsTable.dataSource = self;
     commentsTable.delegate = self;
@@ -270,7 +270,7 @@
             commentLabel.textColor = [UIColor blackColor];
             commentLabel.textAlignment = NSTextAlignmentLeft;
             [cell.contentView addSubview:commentLabel];
-                
+            
             NSString *text = [commentsArray objectAtIndex:indexPath.row-1];
             CGSize constraint = CGSizeMake(252, 20000.0f);
             CGSize size = [text sizeWithFont:[UIFont fontWithName:@"ArialMT" size:14.0f] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
@@ -313,7 +313,6 @@
             likeButton = (UIButton *)[cell.contentView viewWithTag:6];
             numberOfLikesButton = (UIButton *)[cell.contentView viewWithTag:7];
         }
-            
             
         userImageView.image = [userImagesArray objectAtIndex:indexPath.row-1];
         usernameLabel.text = [usernamesArray objectAtIndex:indexPath.row-1];
@@ -610,6 +609,8 @@
 }
 
 -(void)handleGoodDelete{
+    
+    
     //remove from all mutablearrays
     [commentsIDsArray removeObjectAtIndex:deletingRow-1];
     [userIDsArray removeObjectAtIndex:deletingRow-1];
@@ -619,6 +620,9 @@
     [likedArray removeObjectAtIndex:deletingRow-1];
     [numberOfLikesArray removeObjectAtIndex:deletingRow-1];
     [userImagesArray removeObjectAtIndex:deletingRow-1];
+    
+    NSIndexPath* rowToReload = [NSIndexPath indexPathForRow:deletingRow inSection:0];
+    [commentsTable deleteRowsAtIndexPaths:[NSArray arrayWithObject:rowToReload] withRowAnimation:UITableViewRowAnimationNone];
     
     [commentsTable reloadData];
     [progressAlert dismissWithClickedButtonIndex:0 animated:YES];

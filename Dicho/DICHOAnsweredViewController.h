@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DICHOAnsweredViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface DICHOAnsweredViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 
 {
     NSMutableArray *dichoIDsArray;
@@ -38,6 +38,8 @@
     
 }
 @property (weak, nonatomic) IBOutlet UITableView *answeredTable;
+-(IBAction)share:(id)sender;
+@property int shareSection;
 -(IBAction)starADicho:(id)sender;
 -(IBAction)showThePicture:(id)sender;
 @property (nonatomic) IBOutlet UIAlertView *pictureAlert;

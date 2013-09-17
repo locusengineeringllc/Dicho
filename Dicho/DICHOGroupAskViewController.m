@@ -288,7 +288,7 @@
     //check for picture and handle if so
     if(hasPicture == 1){
         
-        NSData *imageData = UIImageJPEGRepresentation(selectedImage.image, .1);
+        NSData *imageData = UIImageJPEGRepresentation(selectedImage.image, .5);
         
         [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
         [body appendData:[@"Content-Disposition: form-data; name=\"userfile\"; filename=\".jpeg\"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];

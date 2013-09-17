@@ -179,6 +179,7 @@
         UILabel *secondAnswerLabel;
         UILabel *firstAnswerBar;
         UILabel *secondAnswerBar;
+        UILabel *secondAnswerBarLabel;
         
                 
         if (cell == nil) {
@@ -209,16 +210,19 @@
             firstAnswerBar.backgroundColor = [UIColor  colorWithRed:0.0 green:0.25 blue:0.5 alpha:1.0];
             [cell.contentView addSubview:firstAnswerBar];
             
-            
-            
             secondAnswerBar = [[UILabel alloc] init];
-            secondAnswerBar.text = [NSString stringWithFormat:@"%@%%", secondPercent];
-            secondAnswerBar.textAlignment = NSTextAlignmentRight;
             secondAnswerBar.frame = CGRectMake(310-secondWidth, 30, secondWidth, 30);
-            secondAnswerBar.font = [UIFont fontWithName:@"Arial-BoldMT" size:15.0f];
-            secondAnswerBar.textColor = [UIColor whiteColor];
             secondAnswerBar.backgroundColor = [UIColor  colorWithRed:0.0 green:0.5 blue:1.0 alpha:1.0];
             [cell.contentView addSubview:secondAnswerBar];
+            
+            secondAnswerBarLabel = [[UILabel alloc] init];
+            secondAnswerBarLabel.text = [NSString stringWithFormat:@"%@%%", secondPercent];
+            secondAnswerBarLabel.textAlignment = NSTextAlignmentRight;
+            secondAnswerBarLabel.frame = CGRectMake(310-secondWidth, 30, secondWidth-5, 30);
+            secondAnswerBarLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:15.0f];
+            secondAnswerBarLabel.textColor = [UIColor whiteColor];
+            secondAnswerBarLabel.backgroundColor = [UIColor clearColor];
+            [cell.contentView addSubview:secondAnswerBarLabel];
             
         }
         return cell;

@@ -7,6 +7,7 @@
 //
 
 #import "DICHOLogInViewController.h"
+#import <Parse/Parse.h>
 
 @interface DICHOLogInViewController ()
 
@@ -217,6 +218,11 @@
     [prefs setObject:@"yes" forKey:@"firstTimeToSubmit"];
     [prefs setObject:@"yes" forKey:@"firstTimeToSearch"];
     [prefs setObject:@"yes" forKey:@"firstTimeToHome"];
+    
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation addUniqueObject:[NSString stringWithFormat:@"c%@c", [prefs objectForKey:@"userID"]] forKey:@"channels"];
+    [currentInstallation saveInBackground];
+    [prefs setObject:@"1" forKey:@"hasSetPushChannel"];
     
     [loginAlert dismissWithClickedButtonIndex:0 animated:YES];
     [self.navigationController popToRootViewControllerAnimated:TRUE];

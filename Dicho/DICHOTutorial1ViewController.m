@@ -34,6 +34,12 @@
                                            action:@selector(handleSwipeLeft)];
     swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.view addGestureRecognizer:swipeLeft];
+    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc]
+                                            initWithTarget:self
+                                            action:@selector(handleSwipeRight)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRight];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -53,6 +59,11 @@
 
 -(void)handleSwipeLeft{
     [self performSegueWithIdentifier:@"1to2" sender:self];
+}
+
+-(void)handleSwipeRight{
+    [self performSegueWithIdentifier:@"1to0" sender:self];
+    
 }
 
 @end

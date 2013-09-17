@@ -14,6 +14,7 @@
 #import "DICHOSingleGroupViewController.h"
 #import "DICHOCommentsViewController.h"
 #import "DICHOPictureViewController.h"
+#import <Social/Social.h>
 
 @interface DICHOMainViewController ()
 
@@ -27,6 +28,7 @@
 @synthesize votingSection;
 @synthesize votingForFirst;
 @synthesize starringSection;
+@synthesize shareSection;
 @synthesize loadingMore;
 @synthesize loadedAll;
 @synthesize progressAlert;
@@ -70,39 +72,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.0 green:0.3 blue:0.6 alpha:1.0];
-    
-    ////
-    //hi
-    
-    [self.navigationController.navigationBar setTitleTextAttributes:
-     
-     [NSDictionary dictionaryWithObjectsAndKeys:
-      
-      //[UIColor colorWithRed:0.0 green:0.3 blue:0.6 alpha:1.0], UITextAttributeTextColor,
-      //////[UIFont fontWithName:@"Arial-BoldMT" size:18.0], UITextAttributeFont,
-      
-      nil]];
-    //self.navigationController.navigationBar.translucent = NO;
+   
 
-    //////
     
     dichoTable.backgroundView = nil;
     dichoTable.backgroundColor = [UIColor colorWithRed:0.94 green:0.98 blue:1.0 alpha:1.0];
-    //dichoTable.backgroundColor = [UIColor colorWithRed:0.0 green:0.3 blue:0.6 alpha:1.0];
-    //dichoTable.backgroundColor = [UIColor colorWithWhite:0.0 alpha:1.0];
     dichoTable.sectionFooterHeight= 5.0;
     dichoTable.sectionHeaderHeight = 0.0;
-    ///////dichoTable.contentInset = UIEdgeInsetsMake(-13.0, 0, 0, 0);
-    ////UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default.png"]];
-    ///[tempImageView setFrame:dichoTable.frame];
-    
-    ///dichoTable.backgroundView = tempImageView;
     
     refreshControl = [[UIRefreshControl alloc] init];
-    refreshControl.tintColor = [UIColor colorWithRed:0.0 green:0.3 blue:0.6 alpha:0.5];
     refreshControl.tintColor = [UIColor colorWithRed:0.0 green:0.3 blue:0.6 alpha:0.6];
-
-    //refreshControl.tintColor = [UIColor whiteColor];
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [dichoTable addSubview:refreshControl];
     
@@ -230,7 +209,6 @@
             [cell.contentView addSubview:userImageButton];
 
             //create, format, and add username label
-            //nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(62, 10, 242, 21)];//////original
             nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(62, 10, 219, 21)];
             nameLabel.tag = 1;
             nameLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:13.0f];
@@ -241,9 +219,7 @@
             [cell.contentView addSubview:nameLabel];
             
             //create, format, and add name label
-            //usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(62, 26, 239, 21)]; ////original
-            usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(62, 26, 219, 21)];
-
+            usernameLabel = [[UILabel alloc] initWithFrame:CGRectMake(62, 26, 206, 21)];
             usernameLabel.tag = 2;
             usernameLabel.font = [UIFont fontWithName:@"ArialMT" size:13.0f];
             usernameLabel.textAlignment = NSTextAlignmentLeft;
@@ -277,19 +253,18 @@
             CGSize size = [text sizeWithFont:[UIFont fontWithName:@"ArialMT" size:16.0f] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
             
             //create, format, and add firstVotes label
-            firstVotesLabel = [[UILabel alloc] initWithFrame:CGRectMake(277, 75+MAX(size.height, 13.0f), 41, 25)]; //262x and center
+            firstVotesLabel = [[UILabel alloc] initWithFrame:CGRectMake(272, 75+MAX(size.height, 13.0f), 38, 25)];
             firstVotesLabel.tag = 12;
             firstVotesLabel.font = [UIFont fontWithName:@"ArialMT" size:16.0f];
             firstVotesLabel.adjustsFontSizeToFitWidth = YES;
             firstVotesLabel.textAlignment = NSTextAlignmentCenter;
             firstVotesLabel.textColor = [UIColor colorWithWhite:0.55 alpha:1.0];
             firstVotesLabel.backgroundColor = [UIColor whiteColor];
-            //firstVotesLabel.text = @"42";
             [cell.contentView addSubview:firstVotesLabel];
             
             UIButton *firstAnswerButton = [UIButton buttonWithType:UIButtonTypeCustom];
             firstAnswerButton.tag = 7;
-            [firstAnswerButton setFrame:CGRectMake(25, 75+MAX(size.height, 13.0f), 250, 25)]; ////10x, 250w
+            [firstAnswerButton setFrame:CGRectMake(10, 75+MAX(size.height, 13.0f), 260, 25)];
             [firstAnswerButton setTitle:[firstAnswersArray objectAtIndex:indexPath.section] forState:UIControlStateNormal];
             firstAnswerButton.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:16.0f];
             firstAnswerButton.titleLabel.adjustsFontSizeToFitWidth = YES;
@@ -307,7 +282,7 @@
             firstAnswerButton.showsTouchWhenHighlighted = YES;
             
             //create, format, and add secondVotes label
-            secondVotesLabel = [[UILabel alloc] initWithFrame:CGRectMake(277, 110+MAX(size.height, 13.0f), 41, 25)];
+            secondVotesLabel = [[UILabel alloc] initWithFrame:CGRectMake(272, 110+MAX(size.height, 13.0f), 38, 25)];
             secondVotesLabel.tag = 13;
             secondVotesLabel.font = [UIFont fontWithName:@"ArialMT" size:16.0f];
             secondVotesLabel.adjustsFontSizeToFitWidth = YES;
@@ -318,7 +293,7 @@
             
             UIButton *secondAnswerButton = [UIButton buttonWithType:UIButtonTypeCustom];
             secondAnswerButton.tag = 8;
-            [secondAnswerButton setFrame:CGRectMake(25, 110+MAX(size.height, 13.0f), 250, 25)]; ////10x, 250w
+            [secondAnswerButton setFrame:CGRectMake(10, 110+MAX(size.height, 13.0f), 260, 25)]; ////10x, 250w
             [secondAnswerButton setTitle:[secondAnswersArray objectAtIndex:indexPath.section] forState:UIControlStateNormal];
             secondAnswerButton.titleLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:16.0f];
             secondAnswerButton.titleLabel.adjustsFontSizeToFitWidth = YES;
@@ -400,6 +375,9 @@
             [pictureButton addTarget:self action:@selector(showThePicture:) forControlEvents:UIControlEventTouchUpInside];
             [pictureButton setFrame:CGRectMake(286, 26, 35, 28)]; ////original
             [pictureButton setFrame:CGRectMake(281, 24, 40, 32)];
+            [pictureButton setFrame:CGRectMake(268, 24, 45, 36)];
+
+
             if([[picturesArray objectAtIndex:indexPath.section] isEqualToString:@"1"]){
                 [pictureButton setBackgroundImage:[UIImage imageNamed:@"dicho_camera_blue.png"] forState:UIControlStateNormal];
                 [pictureButton setEnabled:YES];
@@ -512,18 +490,16 @@
         CGSize size = [text sizeWithFont:[UIFont fontWithName:@"ArialMT" size:16.0f] constrainedToSize:constraint lineBreakMode:NSLineBreakByWordWrapping];
         [questionLabel setFrame:CGRectMake(10, 65, 300, MAX(size.height, 13.0f))];
     
-        [firstVotesLabel setFrame:CGRectMake(277, 75+MAX(size.height, 13.0f), 41, 25)];
-        [secondVotesLabel setFrame:CGRectMake(277, 110+MAX(size.height, 13.0f), 41, 25)];
+        [firstVotesLabel setFrame:CGRectMake(272, 75+MAX(size.height, 13.0f), 38, 25)];
+        [secondVotesLabel setFrame:CGRectMake(272, 110+MAX(size.height, 13.0f), 38, 25)];
 
         [firstAnswerButton setTitle:[firstAnswersArray objectAtIndex:indexPath.section] forState:UIControlStateNormal];
-        [firstAnswerButton setFrame:CGRectMake(25, 75+MAX(size.height, 13.0f), 250, 25)]; /////10x, 250w
+        [firstAnswerButton setFrame:CGRectMake(10, 75+MAX(size.height, 13.0f), 260, 25)];
 
         [secondAnswerButton setTitle:[secondAnswersArray objectAtIndex:indexPath.section] forState:UIControlStateNormal];
-        [secondAnswerButton setFrame:CGRectMake(25, 110+MAX(size.height, 13.0f), 250, 25)]; /////10x, 250w
+        [secondAnswerButton setFrame:CGRectMake(10, 110+MAX(size.height, 13.0f), 260, 25)];
         
-        [pictureButton setFrame:CGRectMake(286, 26, 35, 28)]; ////original
-        [pictureButton setFrame:CGRectMake(281, 24, 40, 32)];
-
+        [pictureButton setFrame:CGRectMake(268, 24, 45, 36)];
         [userImageButton setFrame:CGRectMake(10, 6, 46, 46)];
         
         return cell;
@@ -531,7 +507,7 @@
     }else if(indexPath.section<[dichosArray count] && indexPath.row==1){
         static NSString *CellIdentifier = @"questionInfoCell";
         
-        UILabel *dateLabel;
+        UIButton *shareButton;
         UIButton *starButton;
         UIButton *resultsButton;
         UIButton *commentsButton;
@@ -545,14 +521,21 @@
             
             cell.backgroundColor = [UIColor whiteColor];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-            //create, position, and add date label
-            dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(13, 10, 80, 21)];
-            dateLabel.tag = 1;
-            dateLabel.font = [UIFont fontWithName:@"ArialMT" size:14.0f];
-            dateLabel.textAlignment = NSTextAlignmentLeft;
-            dateLabel.textColor = [UIColor darkGrayColor];
-            [cell.contentView addSubview:dateLabel];
+            
+            //create, position, and add share button
+            shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            shareButton.tag = 1;
+            shareButton.showsTouchWhenHighlighted = YES;
+            [shareButton addTarget:self action:@selector(share:) forControlEvents:UIControlEventTouchUpInside];
+            [shareButton setFrame:CGRectMake(15, 4, 45, 37)];
+            [shareButton setImage:[UIImage imageNamed:@"shareButton.png"] forState:UIControlStateNormal];
+            [cell.contentView addSubview:shareButton];
+            
+            if([[isGroupArray objectAtIndex:indexPath.section] isEqualToString:@"1"]){
+                shareButton.enabled = NO;
+            }else{
+                shareButton.enabled = YES;
+            }
             
             //create, position, and add comments button and then label
             commentsButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -618,11 +601,17 @@
              [cell.contentView addSubview:starButton];
             
         }else{
-            dateLabel = (UILabel *)[cell.contentView viewWithTag:1];
+            shareButton = (UIButton *)[cell.contentView viewWithTag:1];
             commentsButton = (UIButton *)[cell.contentView viewWithTag:2];
             commentsLabel = (UILabel *)[cell.contentView viewWithTag:3];
             resultsButton = (UIButton *)[cell.contentView viewWithTag:4];
             starButton = (UIButton *)[cell.contentView viewWithTag:5];
+            
+            if([[isGroupArray objectAtIndex:indexPath.section] isEqualToString:@"1"]){
+                shareButton.enabled = NO;
+            }else{
+                shareButton.enabled = YES;
+            }
           
             if([[answeredsArray objectAtIndex:indexPath.section] isEqualToString:@"0"]){
                 resultsButton.userInteractionEnabled = NO;
@@ -653,7 +642,6 @@
              }
         }
         
-        dateLabel.text = [NSString stringWithFormat:@"%@", [datesArray objectAtIndex:indexPath.section]];
         return cell;
         
     }else{
@@ -684,24 +672,11 @@
 }
 
 - (IBAction)showThePicture:(id)sender {
-    /*pictureAlert= [[UIAlertView alloc] initWithTitle:nil message:@"\n\n\n\n\n\n\n\n\n\n\n\n" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-    [pictureAlert show];
-    NSIndexPath *indexPath = [self.dichoTable indexPathForCell:(UITableViewCell*)[[[sender superview] superview]superview]];
-
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, 265, 265)]; //285 height
-    ////imageView.backgroundColor = [UIColor greenColor];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    NSString *imageUrl= [NSString stringWithFormat:@"http://dichoapp.com/dichoImages/%@.jpeg", [dichoIDsArray objectAtIndex:indexPath.section]];
-    UIImage *dichoImage = [UIImage imageWithData: [NSData dataWithContentsOfURL: [NSURL URLWithString:imageUrl]]];
-    imageView.image = dichoImage;
-    imageView.backgroundColor=[UIColor clearColor];
-    [pictureAlert addSubview:imageView];*/
     
     NSIndexPath *indexPath = [self.dichoTable indexPathForCell:(UITableViewCell*)[[[sender superview] superview]superview]];
 
     DICHOPictureViewController *pictureView = [[DICHOPictureViewController alloc] initWithDichoID:[dichoIDsArray objectAtIndex:indexPath.section]];
     [pictureView setModalTransitionStyle:UIModalTransitionStyleCoverVertical];
-    //[self presentModalViewController:pictureView animated:YES];
     [self presentViewController:pictureView animated:YES completion:NULL];
 }
 
@@ -1078,6 +1053,42 @@
     [progressAlert dismissWithClickedButtonIndex:0 animated:YES];
     UIAlertView *starringFail = [[UIAlertView alloc] initWithTitle:@"Connection error." message:@"Please make sure you have a stable internet connection and try again." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     [starringFail show];
+}
+
+-(IBAction)share:(id)sender{
+    NSIndexPath *indexPath = [self.dichoTable indexPathForCell:(UITableViewCell*)[[[sender superview] superview]superview]];
+    shareSection = indexPath.section;
+
+    UIActionSheet *shareSheet = [[UIActionSheet alloc] initWithTitle:@"Share this Dicho" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Twitter", @"Facebook", @"Copy Link", nil];
+    [shareSheet showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSString *dichoID = [dichoIDsArray objectAtIndex:shareSection];
+    NSString *dichoURL = [NSString stringWithFormat:@"http://dichoapp.com/files/webDicho.php?dhcd=%@", dichoID];
+    
+    if (buttonIndex == 0) {
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+        {
+            SLComposeViewController *tweetSheet = [SLComposeViewController
+                                                   composeViewControllerForServiceType:SLServiceTypeTwitter];
+            [tweetSheet setInitialText:@"Check out this Dicho!"];
+            [tweetSheet addURL:[NSURL URLWithString:dichoURL]];
+            
+            [self presentViewController:tweetSheet animated:YES completion:nil];
+        }
+    } else if (buttonIndex == 1) {
+        if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            
+            [controller setInitialText:@"Check out this Dicho!"];
+            [controller addURL:[NSURL URLWithString:dichoURL]]; //format with dichoID
+            
+            [self presentViewController:controller animated:YES completion:Nil];
+        }
+    } else if (buttonIndex == 2) {
+        [UIPasteboard generalPasteboard].string = dichoURL;
+    }
 }
 
 -(IBAction)goToUser:(id)sender{

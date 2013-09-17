@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 //#import <SystemConfiguration/SystemConfiguration.h>
 
-@interface DICHOMainViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface DICHOMainViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 {
     NSMutableArray *dichoIDsArray;
     NSMutableArray *dichosArray;
@@ -41,6 +41,8 @@
 - (IBAction)refresh:(id)sender;
 @property (nonatomic, strong) IBOutlet UIRefreshControl *refreshControl;
 -(IBAction)starADicho:(id)sender;
+-(IBAction)share:(id)sender;
+@property int shareSection;
 -(IBAction)showThePicture:(id)sender;
 @property (nonatomic) IBOutlet UIAlertView *pictureAlert;
 
