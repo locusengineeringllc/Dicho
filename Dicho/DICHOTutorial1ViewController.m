@@ -40,6 +40,8 @@
                                             action:@selector(handleSwipeRight)];
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:swipeRight];
+    
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{

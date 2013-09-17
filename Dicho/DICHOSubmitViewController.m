@@ -281,10 +281,27 @@
     
 
 - (IBAction)addPicture:(id)sender {
-    UIImagePickerController * picker = [[UIImagePickerController alloc]init];
-    picker.delegate=self;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    [self presentViewController:picker animated:YES completion:nil];
+    UIActionSheet *photoSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Take Photo", @"Camera Roll", nil];
+    [photoSheet showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if (buttonIndex == 0) {
+        //take photo
+        UIImagePickerController * picker = [[UIImagePickerController alloc]init];
+        picker.delegate=self;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:picker animated:YES completion:nil];
+
+    } else if (buttonIndex == 1) {
+        //camera roll
+        UIImagePickerController * picker = [[UIImagePickerController alloc]init];
+        picker.delegate=self;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:picker animated:YES completion:nil];
+
+    }
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info

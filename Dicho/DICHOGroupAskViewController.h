@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DICHOGroupAskViewController : UIViewController <UITextViewDelegate, UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface DICHOGroupAskViewController : UIViewController <UITextViewDelegate, UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIActionSheetDelegate>
 {
     NSString *userID;
     NSString *groupID;

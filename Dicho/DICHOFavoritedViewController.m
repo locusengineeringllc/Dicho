@@ -492,7 +492,7 @@
             shareButton.tag = 1;
             shareButton.showsTouchWhenHighlighted = YES;
             [shareButton addTarget:self action:@selector(share:) forControlEvents:UIControlEventTouchUpInside];
-            [shareButton setFrame:CGRectMake(15, 4, 36, 36)];
+            [shareButton setFrame:CGRectMake(15, 7.5, 34, 27.74)];
             [shareButton setImage:[UIImage imageNamed:@"shareButton.png"] forState:UIControlStateNormal];
             [cell.contentView addSubview:shareButton];
             
@@ -506,11 +506,11 @@
             commentsButton = [UIButton buttonWithType:UIButtonTypeCustom];
             commentsButton.tag = 2;
             [commentsButton addTarget:self action:@selector(goToComments:) forControlEvents:UIControlEventTouchUpInside];
-            [commentsButton setFrame:CGRectMake(94, 0, 44, 44)];
+            [commentsButton setFrame:CGRectMake(86, 2, 40, 40)];
             [commentsButton setImage:[UIImage imageNamed:@"comment_filled.png"] forState:UIControlStateNormal];
             [cell.contentView addSubview:commentsButton];
             
-            commentsLabel = [[UILabel alloc] initWithFrame:CGRectMake(94, 2, 44, 37)];
+            commentsLabel = [[UILabel alloc] initWithFrame:CGRectMake(86, 2, 40, 37)];
             commentsLabel.tag = 3;
             commentsLabel.font = [UIFont fontWithName:@"Arial-BoldMT" size:14.0f];
             commentsLabel.textAlignment = NSTextAlignmentCenter;
@@ -528,7 +528,7 @@
             
             resultsButton = [UIButton buttonWithType:UIButtonTypeCustom];
             resultsButton.tag = 4;
-            [resultsButton setFrame:CGRectMake(166, 7, 70, 30)];
+            [resultsButton setFrame:CGRectMake(163, 10, 60, 24)];
             [resultsButton addTarget:self action:@selector(results:) forControlEvents:UIControlEventTouchUpInside];
             [resultsButton setImage:[UIImage imageNamed:@"results_filled.png"] forState:UIControlStateNormal];
             [cell.contentView addSubview:resultsButton];
@@ -536,7 +536,7 @@
             //create, position, and add star button
             starButton = [UIButton buttonWithType:UIButtonTypeCustom];
             starButton.tag = 5;
-            [starButton setFrame:CGRectMake(256, 6, 32, 32)];
+            [starButton setFrame:CGRectMake(253, 8, 28, 28)];
             [starButton setImage:[UIImage imageNamed:@"favorite_filled.png"] forState:UIControlStateNormal];
             [starButton setUserInteractionEnabled:NO];
             [cell.contentView addSubview:starButton];

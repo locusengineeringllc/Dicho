@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface DICHOSetsTutorial1ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *label;
+
+@property (weak, nonatomic) IBOutlet UIImageView *tutorialImageView;
+
 @property int imageNumber;
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DICHOSubmitViewController : UIViewController <UITextViewDelegate, UITextFieldDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface DICHOSubmitViewController : UIViewController <UITextViewDelegate, UITextFieldDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate, UIActionSheetDelegate>
 {
     UIImageView *clearImageView;
     NSUserDefaults *prefs;

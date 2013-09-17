@@ -13,7 +13,7 @@
 @end
 
 @implementation DICHOSetsTutorial1ViewController
-@synthesize label;
+@synthesize tutorialImageView;
 @synthesize imageNumber;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,8 +28,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    tutorialImageView.center = self.view.center;
     imageNumber = 1;
-    label.text = @"1";
+    tutorialImageView.image = [UIImage imageNamed:@"Tut1.jpg"];
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc]
                                            initWithTarget:self
                                            action:@selector(handleSwipeLeft)];
@@ -54,21 +55,17 @@
     //if 7 then dismiss
     imageNumber = imageNumber + 1;
     if(imageNumber == 1){
-        label.text = @"1";
+        tutorialImageView.image = [UIImage imageNamed:@"Tut1.jpg"];
     }else if(imageNumber == 2){
-        label.text = @"2";
+        tutorialImageView.image = [UIImage imageNamed:@"Tut2.jpg"];
     }else if(imageNumber == 3){
-        label.text = @"3";
-
+        tutorialImageView.image = [UIImage imageNamed:@"Tut3.jpg"];
     }else if(imageNumber == 4){
-        label.text = @"4";
-
+        tutorialImageView.image = [UIImage imageNamed:@"Tut4.jpg"];
     }else if(imageNumber == 5){
-        label.text = @"5";
-
+        tutorialImageView.image = [UIImage imageNamed:@"Tut5.jpg"];
     }else if(imageNumber == 6){
-        label.text = @"6";
-
+        tutorialImageView.image = [UIImage imageNamed:@"Tut6.jpg"];
     }else if(imageNumber == 7){
         //dismiss
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
@@ -84,23 +81,17 @@
     if(imageNumber == 0){
         [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
     }else if(imageNumber == 1){
-        label.text = @"1";
-
+        tutorialImageView.image = [UIImage imageNamed:@"Tut1.jpg"];
     }else if(imageNumber == 2){
-        label.text = @"2";
-
+        tutorialImageView.image = [UIImage imageNamed:@"Tut2.jpg"];
     }else if(imageNumber == 3){
-        label.text = @"3";
-
+        tutorialImageView.image = [UIImage imageNamed:@"Tut3.jpg"];
     }else if(imageNumber == 4){
-        label.text = @"4";
-
+        tutorialImageView.image = [UIImage imageNamed:@"Tut4.jpg"];
     }else if(imageNumber == 5){
-        label.text = @"5";
-
+        tutorialImageView.image = [UIImage imageNamed:@"Tut5.jpg"];
     }else if(imageNumber == 6){
-        label.text = @"6";
-
+        tutorialImageView.image = [UIImage imageNamed:@"Tut6.jpg"];
     }
 }
 @end
